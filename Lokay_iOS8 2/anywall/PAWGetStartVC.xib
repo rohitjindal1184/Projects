@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PAWGetStartVC">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="NKY-hR-clf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundStart.png" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-oB-9xw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fTU-DE-dNm">
+                    <rect key="frame" x="44" y="217" width="224" height="93"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="224" id="iMO-xd-6Fh"/>
+                        <constraint firstAttribute="height" constant="93" id="thM-xm-4Cg"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJq-WE-CRs">
+                    <rect key="frame" x="33" y="471" width="246" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="246" id="1xR-uh-CUq"/>
+                        <constraint firstAttribute="height" constant="34" id="vaI-Jh-GrH"/>
+                    </constraints>
+                    <state key="normal" image="getstarted.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="getSatrt:" destination="-1" eventType="touchUpInside" id="srg-P0-GNX"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redpin1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-K3-7We">
+                    <rect key="frame" x="266" y="25" width="38" height="43"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fTU-DE-dNm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cw2-xq-bO1"/>
+                <constraint firstItem="fTU-DE-dNm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kEC-Xf-3AX"/>
+                <constraint firstAttribute="bottom" secondItem="vJq-WE-CRs" secondAttribute="bottom" constant="63" id="ojr-lF-uae"/>
+                <constraint firstItem="vJq-WE-CRs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="33" id="yBr-5y-vjX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="303" y="177"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundStart.png" width="319" height="568"/>
+        <image name="getstarted.png" width="246" height="34"/>
+        <image name="redpin1.png" width="38" height="43"/>
+        <image name="screen1_1.png" width="224" height="93"/>
+    </resources>
+</document>
