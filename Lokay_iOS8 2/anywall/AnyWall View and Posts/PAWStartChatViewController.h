@@ -10,7 +10,8 @@
 #import "AutoSuggestTableView.h"
 #import "MBProgressHUD.h"
 #import "Mailgun.h"
-@interface PAWStartChatViewController : UIViewController<PlaceSelected>
+#import "DropboxBrowserViewController.h"
+@interface PAWStartChatViewController : UIViewController<PlaceSelected,DropboxBrowserDelegate>
 {
 	AutoSuggestTableView *autoSuggestionView;
 	BOOL viewDisaaper;

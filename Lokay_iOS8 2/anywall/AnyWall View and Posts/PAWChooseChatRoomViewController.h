@@ -32,6 +32,15 @@
 	TabView *tabview;
     __weak IBOutlet UITableView *chatroomTb;
 	NSArray *arrPlaces;
+	NSMutableArray *arrBar;
+
+	NSMutableArray *arrClub;
+
+	NSMutableArray *arrDayParties;
+
+	NSMutableArray *arrBrunches;
+	int selectedOption;
+	NSArray *arrSelectedOption;
 
 //	ChatRoomTable *chatroomTb;
 }

@@ -7,13 +7,14 @@ static NSString * const defaultsFilterDistanceKey = @"filterDistance";
 static NSString * const defaultsLocationKey = @"currentLocation";
 
 #import "PAWAppDelegate.h"
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
 #import "PAWChatRoom.h"
 #import "PAWGetStartVC.h"
 #import "PAWEnterChatViewController.h"
 #import "PAWChooseChatRoomViewController.h"
 #define kSwearsArr @"swearsArr"
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface PAWAppDelegate ()
 
@@ -33,6 +34,10 @@ static NSString * const defaultsLocationKey = @"currentLocation";
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[FBAppEvents activateApp];
+	DBSession *dbSession = [[DBSession alloc] initWithAppKey:@"3dn4cl21kveje4z" appSecret:@"qh67mpjf2dnkw7w" root:kDBRootDropbox];
+	[DBSession setSharedSession:dbSession];
+
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChanged:) name:kReachabilityChangedNotification object:nil];
 	
 	self.reachability = [Reachability reachabilityForInternetConnection];
@@ -69,7 +74,7 @@ static NSString * const defaultsLocationKey = @"currentLocation";
     // ****************************************************************************
     [PFFacebookUtils initializeFacebook];
 	
-	[PFTwitterUtils initializeWithConsumerKey:@"cCsKjLCQaTItWaS6Hr2kfw" consumerSecret:@"ZecRAT3UourjY9P2ACeoHLG7L7AQGaSk5CkHld3Mq8s"];
+	//[PFTwitterUtils initializeWithConsumerKey:@"cCsKjLCQaTItWaS6Hr2kfw" consumerSecret:@"ZecRAT3UourjY9P2ACeoHLG7L7AQGaSk5CkHld3Mq8s"];
 	
 	// Grab values from NSUserDefaults:
 	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -249,7 +254,22 @@ static NSString * const defaultsLocationKey = @"currentLocation";
 // App switching methods to support Facebook Single Sign-On.
 // ****************************************************************************
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [PFFacebookUtils handleOpenURL:url];
+	
+	if ([[DBSession sharedSession] handleOpenURL:url]) {
+		if ([[DBSession sharedSession] isLinked]) {
+			NSLog(@"App linked successfully!");
+			// At this point you can start making API calls
+		}
+		return YES;
+	
+	BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+																  openURL:url
+														sourceApplication:sourceApplication
+															   annotation:annotation
+					];
+
+    return handled;
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

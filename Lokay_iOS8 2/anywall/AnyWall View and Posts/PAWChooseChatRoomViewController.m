@@ -56,6 +56,30 @@
 	}
 	return self;
 }
+-(void)filterData
+{
+	arrBar = [[NSMutableArray alloc]init];
+	arrBrunches = [[NSMutableArray alloc]init];
+	arrClub = [[NSMutableArray alloc]init];
+	arrDayParties = [[NSMutableArray alloc]init];
+	 for (PAWChatRoom *chatRoom in self.arrChatRoom)
+	 {
+		 NSString * pinColor = [chatRoom.object objectForKey:@"type"];
+		 if ([pinColor isEqualToString:@"Blue"]) {
+			 [arrBrunches addObject:chatRoom];
+		 }
+		 else if ([pinColor isEqualToString:@"Green"]) {
+			 [arrDayParties addObject:chatRoom];
+		 }
+		 else if ([pinColor isEqualToString:@"Red"]) {
+			 [arrBar addObject:chatRoom];
+		 }
+		 else if ([pinColor isEqualToString:@"Purple"]) {
+			 [arrClub addObject:chatRoom];
+		 }
+	 }
+	arrSelectedOption = [[NSArray alloc]initWithArray:arrBar];
+}
 - (IBAction)notificationSwitchValue:(id)sender {
 	UISwitch *switchNotification = (UISwitch *)sender;
 	if(switchNotification.on)
@@ -120,18 +144,20 @@
 	_txtSearch.leftViewMode = UITextFieldViewModeAlways;
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(gotoNotifications) name:@"gotoNotification" object:nil];
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(gotoDetail:) name:@"gotoDetail" object:nil];
-	arrPlaces = @[@"Bar",@"Brunches",@"Clubs",@"Day Parties"];
+	arrPlaces = @[@"Bars",@"Brunches",@"Clubs",@"Day Parties"];
 	self.selectionList = [[HTHorizontalSelectionList alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
 	self.selectionList.delegate = self;
 	self.selectionList.dataSource = self;
 	[self.view addSubview:self.selectionList];
 	chatroomTb.frame = CGRectMake(0, 105, 320, 470);
-	_selectionList.frame = CGRectMake(0, 65, 320, 40);
-	_selectionList.hidden = YES;
+	_selectionList.frame = CGRectMake(2, 60, 320, 40);
+	//_selectionList.backgroundColor = [UIColor blackColor];
+	//_selectionList.hidden = YES;
 
 
 	
 }
+
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
@@ -260,13 +286,13 @@
 	{
 		_mapView.hidden = NO;
 		chatroomTb.hidden = YES;
-		_selectionList.hidden = YES;
+		//_selectionList.hidden = YES;
 	}
 	else
 	{
 		_mapView.hidden = YES;
 		chatroomTb.hidden = NO;
-		_selectionList.hidden = NO;
+		//_selectionList.hidden = NO;
 
 	}
 }
@@ -296,7 +322,10 @@
 }
 
 - (IBAction)refreshChat:(id)sender {
+	[self.selectionList reloadData];
+	[self.selectionList setInitalSelection];
 	[self getAllChatRoom];
+	
 }
 
 
@@ -499,12 +528,13 @@
 			}
 			NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES];
 			self.arrChatRoom = [[self.allChatRoom sortedArrayUsingDescriptors:@[sortDesc]] mutableCopy];
+			[self filterData];
 			[chatroomTb reloadData];
 			self.allChatRoomMain = [self.allChatRoom mutableCopy];
 			//chatroomTb.arrRooms = self.allChatRoom;
 			//chatroomTb.arrChatRoom = self.allChatRoom;
 			[self.mapView removeAnnotations:self.mapView.annotations];
-			[self.mapView addAnnotations:self.allChatRoom];
+			[self.mapView addAnnotations:arrSelectedOption];
 			if(self.allEvent.count)
 			{
 				[self.mapView addAnnotations:self.allEvent];
@@ -1357,9 +1387,9 @@
 	{
 						_txtSearch.hidden = NO;
 
-				_mapView.frame = CGRectMake(0, 115, 320, 410);
+				_mapView.frame = CGRectMake(0, 145, 320, 410);
 				chatroomTb.frame = CGRectMake(0, 145, 320, 410);
-		_selectionList.frame = CGRectMake(0, 115, 320, 40);
+		_selectionList.frame = CGRectMake(0, 110, 320, 40);
 		
 		
 	}
@@ -1367,9 +1397,9 @@
 	{
 						_txtSearch.hidden = YES;
 
-				_mapView.frame = CGRectMake(0, 65, 320, 470);
+				_mapView.frame = CGRectMake(0, 115, 320, 470);
 				chatroomTb.frame = CGRectMake(0, 105, 320, 470);
-		_selectionList.frame = CGRectMake(0, 65, 320, 40);
+		_selectionList.frame = CGRectMake(0, 60, 320, 40);
 
 
 	
@@ -1379,9 +1409,9 @@
 #pragma mark - UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	if(!self.arrChatRoom)
+	if(!arrSelectedOption)
 		return 0;
-	return self.arrChatRoom.count;
+	return arrSelectedOption.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -1393,7 +1423,7 @@
 	{
 		cell = [[[NSBundle mainBundle] loadNibNamed:@"ChatRoomTableViewCell" owner:self options:nil] objectAtIndex:0];
 	}
-	PAWChatRoom *chatRoom = [self.arrChatRoom objectAtIndex:indexPath.row];
+	PAWChatRoom *chatRoom = [arrSelectedOption objectAtIndex:indexPath.row];
 	cell.lblName.text = chatRoom.title;
 	cell.lblAddress.text = 	cell.lblType.text = [NSString stringWithFormat:@"%@",[chatRoom.object objectForKey:@"address"]];
 	PFFile *theImage = [chatRoom.object objectForKey:@"photo"];
@@ -1450,7 +1480,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	PAWChatRoom *chatRoom = [self.arrChatRoom objectAtIndex:indexPath.row];
+	PAWChatRoom *chatRoom = [arrSelectedOption objectAtIndex:indexPath.row];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"gotoDetail" object:chatRoom];
 	
 	
@@ -1479,8 +1509,33 @@
 #pragma mark - HTHorizontalSelectionListDelegate Protocol Methods
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
-	// update the view for the corresponding index
-	//self.selectedItemLabel.text = self.carMakes[index];
+	selectedOption = index;
+	switch (index) {
+		case 0:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrBar];
+			break;
+		case 1:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrBrunches];
+			
+			break;
+		case 2:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrClub];
+			
+			break;
+		case 3:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrDayParties];
+			
+			break;
+			
+			
+		default:
+			break;
+	}
+	[chatroomTb reloadData];
+	[self.mapView removeAnnotations:self.mapView.annotations];
+	[self.mapView addAnnotations:arrSelectedOption];
+
+	
 }
 
 

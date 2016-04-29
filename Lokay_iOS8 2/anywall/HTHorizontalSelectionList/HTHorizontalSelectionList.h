@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, HTHorizontalSelectionIndicatorStyle) {
 - (void)setTitleColor:(UIColor *)color forState:(UIControlState)state;
 
 - (void)reloadData;
+-(void)setInitalSelection;
 
 @end
 

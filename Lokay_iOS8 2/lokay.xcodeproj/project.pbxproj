@@ -7,15 +7,276 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0029E4D21CC08FA80099D033 /* DropboxBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0029E4D11CC08FA80099D033 /* DropboxBrowserViewController.xib */; };
+		0029E4D41CC08FE70099D033 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029E4D31CC08FE70099D033 /* DropboxSDK.framework */; };
+		0029E4D61CC090120099D033 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029E4D51CC090120099D033 /* FBSDKCoreKit.framework */; };
 		002C90261C226E600036436D /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 002C90251C226E600036436D /* cross@2x.png */; };
+		0058CB6B1CC412DD0091E9DF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51D119ADE88900081378 /* AFHTTPRequestOperation.m */; };
+		0058CB6C1CC412DD0091E9DF /* PAWChooseChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853D1F186C66E3000A04E3 /* PAWChooseChatRoomViewController.m */; };
+		0058CB6D1CC412DD0091E9DF /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51D319ADE88900081378 /* AFImageRequestOperation.m */; };
+		0058CB6E1CC412DD0091E9DF /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B6855E19B063CB0040AF41 /* RIButtonItem.m */; };
+		0058CB6F1CC412DD0091E9DF /* MGMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51CA19ADE87A00081378 /* MGMessage.m */; };
+		0058CB701CC412DD0091E9DF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8845187A5E8800FE35FB /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB711CC412DD0091E9DF /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94BA1AF565E3001A6324 /* CustomBadge.m */; };
+		0058CB721CC412DD0091E9DF /* DropboxBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E2EB611CB5E87500C718F0 /* DropboxBrowserViewController.m */; };
+		0058CB731CC412DD0091E9DF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDB36561AF089FD0061C8B9 /* MBProgressHUD.m */; };
+		0058CB741CC412DD0091E9DF /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8841187A5E8800FE35FB /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB751CC412DD0091E9DF /* PAWInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAB05691AFA1FD1006D6066 /* PAWInboxTableViewCell.m */; };
+		0058CB761CC412DD0091E9DF /* PAWCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40300534186DC7580086869B /* PAWCircleView.m */; };
+		0058CB771CC412DD0091E9DF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51CF19ADE88900081378 /* AFHTTPClient.m */; };
+		0058CB781CC412DD0091E9DF /* QBPlasticPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51B519ADE83C00081378 /* QBPlasticPopupMenu.m */; };
+		0058CB791CC412DD0091E9DF /* HTHorizontalSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A535441C8D17FC00382ABC /* HTHorizontalSelectionList.m */; };
+		0058CB7A1CC412DD0091E9DF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8843187A5E8800FE35FB /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB7B1CC412DD0091E9DF /* PAWPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 40300525186DB94B0086869B /* PAWPost.m */; };
+		0058CB7C1CC412DD0091E9DF /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B6856119B063CB0040AF41 /* UIAlertView+Blocks.m */; };
+		0058CB7D1CC412DD0091E9DF /* BadgeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94B81AF565E3001A6324 /* BadgeStyle.m */; };
+		0058CB7E1CC412DD0091E9DF /* HTHorizontalSelectionListScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A535461C8D17FC00382ABC /* HTHorizontalSelectionListScrollView.m */; };
+		0058CB7F1CC412DD0091E9DF /* Mailgun.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51C819ADE87A00081378 /* Mailgun.m */; };
+		0058CB801CC412DD0091E9DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E840214D72E1100E856AB /* main.m */; };
+		0058CB811CC412DD0091E9DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC883B187A5E8800FE35FB /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB821CC412DD0091E9DF /* QBPopupMenuOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51BD19ADE83C00081378 /* QBPopupMenuOverlayView.m */; };
+		0058CB831CC412DD0091E9DF /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC883F187A5E8800FE35FB /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB841CC412DD0091E9DF /* PAWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E840614D72E1100E856AB /* PAWAppDelegate.m */; };
+		0058CB851CC412DD0091E9DF /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6952281AD22713004044D4 /* OverlayViewController.m */; };
+		0058CB861CC412DD0091E9DF /* PAWChatRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40300536186DC7580086869B /* PAWChatRoomView.m */; };
+		0058CB871CC412DD0091E9DF /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7BD011B75FAB900A3BF4F /* TabView.m */; };
+		0058CB881CC412DD0091E9DF /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51DA19ADE88900081378 /* AFPropertyListRequestOperation.m */; };
+		0058CB891CC412DD0091E9DF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51DC19ADE88900081378 /* AFURLConnectionOperation.m */; };
+		0058CB8A1CC412DD0091E9DF /* ChatRoomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7BD061B76006B00A3BF4F /* ChatRoomTableViewCell.m */; };
+		0058CB8B1CC412DD0091E9DF /* QBPopupMenuPagenatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51BF19ADE83C00081378 /* QBPopupMenuPagenatorView.m */; };
+		0058CB8C1CC412DD0091E9DF /* QBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51B719ADE83C00081378 /* QBPopupMenu.m */; };
+		0058CB8D1CC412DD0091E9DF /* PAWForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853CE1186C105D000A04E3 /* PAWForgotPwdViewController.m */; };
+		0058CB8E1CC412DD0091E9DF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51E019ADE88900081378 /* UIImageView+AFNetworking.m */; };
+		0058CB8F1CC412DD0091E9DF /* PAWWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E840914D72E1100E856AB /* PAWWelcomeViewController.m */; };
+		0058CB901CC412DD0091E9DF /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51D519ADE88900081378 /* AFJSONRequestOperation.m */; };
+		0058CB911CC412DD0091E9DF /* PAWWallPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030054B186E5D240086869B /* PAWWallPostsTableViewController.m */; };
+		0058CB921CC412DD0091E9DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC883D187A5E8800FE35FB /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0058CB931CC412DD0091E9DF /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBB15701AFF796E00BA3279 /* UIView+Toast.m */; };
+		0058CB941CC412DD0091E9DF /* PAWWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030054D186E5D240086869B /* PAWWallViewController.m */; };
+		0058CB951CC412DD0091E9DF /* PAWInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAB05641AFA1543006D6066 /* PAWInboxViewController.m */; };
+		0058CB961CC412DD0091E9DF /* PAWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853CE4186C105D000A04E3 /* PAWLoginViewController.m */; };
+		0058CB971CC412DD0091E9DF /* QBPopupMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51B919ADE83C00081378 /* QBPopupMenuItem.m */; };
+		0058CB981CC412DD0091E9DF /* PAWPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8830187A4CE100FE35FB /* PAWPhotoViewController.m */; };
+		0058CB991CC412DD0091E9DF /* PlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED6D9D41AD9B4910001C381 /* PlaceView.m */; };
+		0058CB9A1CC412DD0091E9DF /* PAWWallPostCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853CF1186C10D1000A04E3 /* PAWWallPostCreateViewController.m */; };
+		0058CB9B1CC412DD0091E9DF /* PAWEnterChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853D1A186C338F000A04E3 /* PAWEnterChatViewController.m */; };
+		0058CB9C1CC412DD0091E9DF /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51DE19ADE88900081378 /* AFXMLRequestOperation.m */; };
+		0058CB9D1CC412DD0091E9DF /* MapPinView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6952431AD4B4A9004044D4 /* MapPinView.m */; };
+		0058CB9E1CC412DD0091E9DF /* PAWActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40300532186DC7580086869B /* PAWActivityView.m */; };
+		0058CB9F1CC412DD0091E9DF /* PAWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4E85DF1B82D73B00CAB221 /* PAWSettingViewController.m */; };
+		0058CBA01CC412DD0091E9DF /* PAWSearchRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 40300527186DB94B0086869B /* PAWSearchRadius.m */; };
+		0058CBA11CC412DD0091E9DF /* AutoSuggestTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6952B21AD99F63004044D4 /* AutoSuggestTableView.m */; };
+		0058CBA21CC412DD0091E9DF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1DDE851AD0C14000953776 /* Reachability.m */; };
+		0058CBA31CC412DD0091E9DF /* PAWGetStartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4EBC491B6A683F00D515CD /* PAWGetStartVC.m */; };
+		0058CBA41CC412DD0091E9DF /* QBPopupMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51BB19ADE83C00081378 /* QBPopupMenuItemView.m */; };
+		0058CBA51CC412DD0091E9DF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC51D719ADE88900081378 /* AFNetworkActivityIndicatorManager.m */; };
+		0058CBA61CC412DD0091E9DF /* PAWStartChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853D0A186C17F4000A04E3 /* PAWStartChatViewController.m */; };
+		0058CBA71CC412DD0091E9DF /* EDStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7BD131B76043700A3BF4F /* EDStarRating.m */; };
+		0058CBA81CC412DD0091E9DF /* PAWNewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40853CE7186C105D000A04E3 /* PAWNewUserViewController.m */; };
+		0058CBA91CC412DD0091E9DF /* ChatRoomTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AED83FB81B78D94300AEBEEE /* ChatRoomTable.m */; };
+		0058CBAA1CC412DD0091E9DF /* PAWChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030052B186DB9700086869B /* PAWChatRoom.m */; };
+		0058CBAB1CC412DD0091E9DF /* UnderLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0060A3FD1BF7F7BE003DAAC9 /* UnderLineLabel.m */; };
+		0058CBAD1CC412DD0091E9DF /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D31C9681B6FE0DA0006CCB0 /* libiconv.dylib */; };
+		0058CBAE1CC412DD0091E9DF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D31C9661B6FE0830006CCB0 /* CoreVideo.framework */; };
+		0058CBAF1CC412DD0091E9DF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D31C9641B6FDFEF0006CCB0 /* CoreMedia.framework */; };
+		0058CBB01CC412DD0091E9DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4EBC4D1B6FA91000D515CD /* AVFoundation.framework */; };
+		0058CBB11CC412DD0091E9DF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC8834187A559400FE35FB /* Social.framework */; };
+		0058CBB21CC412DD0091E9DF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D31C9561B6FDE840006CCB0 /* libzbar.a */; };
+		0058CBB31CC412DD0091E9DF /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D31C93E1B6FDE840006CCB0 /* libzbar.a */; };
+		0058CBB41CC412DD0091E9DF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6F01AD5DFD200C0868B /* libsqlite3.0.dylib */; };
+		0058CBB51CC412DD0091E9DF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6EE1AD5DFA900C0868B /* Accounts.framework */; };
+		0058CBB61CC412DD0091E9DF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC51EC19AE084600081378 /* StoreKit.framework */; };
+		0058CBB71CC412DD0091E9DF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC51EA19AE083900081378 /* libz.dylib */; };
+		0058CBB81CC412DD0091E9DF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC8836187A563F00FE35FB /* MessageUI.framework */; };
+		0058CBB91CC412DD0091E9DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3304314D9C3C900089B64 /* QuartzCore.framework */; };
+		0058CBBA1CC412DD0091E9DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3304114D9C3C200089B64 /* Security.framework */; };
+		0058CBBB1CC412DD0091E9DF /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3303F14D9C3BC00089B64 /* libz.1.1.3.dylib */; };
+		0058CBBC1CC412DD0091E9DF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3303D14D9C3AE00089B64 /* MobileCoreServices.framework */; };
+		0058CBBD1CC412DD0091E9DF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3303B14D9C3A800089B64 /* SystemConfiguration.framework */; };
+		0058CBBE1CC412DD0091E9DF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3303914D9C3A200089B64 /* CFNetwork.framework */; };
+		0058CBBF1CC412DD0091E9DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C3303714D9C39900089B64 /* AudioToolbox.framework */; };
+		0058CBC01CC412DD0091E9DF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6E41AD5DD3B00C0868B /* ParseCrashReporting.framework */; };
+		0058CBC11CC412DD0091E9DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56E83FA14D72E1100E856AB /* CoreGraphics.framework */; };
+		0058CBC21CC412DD0091E9DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CAAFF914D738E800D97A18 /* CoreLocation.framework */; };
+		0058CBC31CC412DD0091E9DF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6E51AD5DD3B00C0868B /* ParseFacebookUtils.framework */; };
+		0058CBC41CC412DD0091E9DF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6E31AD5DD3B00C0868B /* Parse.framework */; };
+		0058CBC51CC412DD0091E9DF /* libzbar-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 008E92561BDB3EEA005EAF25 /* libzbar-sim.a */; };
+		0058CBC61CC412DD0091E9DF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029E4D51CC090120099D033 /* FBSDKCoreKit.framework */; };
+		0058CBC71CC412DD0091E9DF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CAAFF714D7376500D97A18 /* MapKit.framework */; };
+		0058CBC81CC412DD0091E9DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56E83F614D72E1100E856AB /* UIKit.framework */; };
+		0058CBC91CC412DD0091E9DF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6F21AD5E25C00C0868B /* FacebookSDK.framework */; };
+		0058CBCA1CC412DD0091E9DF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6E21AD5DD3B00C0868B /* Bolts.framework */; };
+		0058CBCB1CC412DD0091E9DF /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E2EB5E1CB5E7B600C718F0 /* DropboxSDK.framework */; };
+		0058CBCC1CC412DD0091E9DF /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029E4D31CC08FE70099D033 /* DropboxSDK.framework */; };
+		0058CBCD1CC412DD0091E9DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56E83F814D72E1100E856AB /* Foundation.framework */; };
+		0058CBCE1CC412DD0091E9DF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6E71AD5DD3B00C0868B /* ParseUI.framework */; };
+		0058CBCF1CC412DD0091E9DF /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FE6F31AD5E25C00C0868B /* FBAudienceNetwork.framework */; };
+		0058CBD11CC412DD0091E9DF /* screen3_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44B186B20E20059121F /* screen3_1@2x.png */; };
+		0058CBD21CC412DD0091E9DF /* chatbubbles_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A439186B20E20059121F /* chatbubbles_5@2x.png */; };
+		0058CBD31CC412DD0091E9DF /* screen6_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45F186B20E20059121F /* screen6_4@2x.png */; };
+		0058CBD41CC412DD0091E9DF /* nav_signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F44E61875A99B00284171 /* nav_signout.png */; };
+		0058CBD51CC412DD0091E9DF /* icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51AB19ADE70600081378 /* icon-80.png */; };
+		0058CBD61CC412DD0091E9DF /* chatbubbles_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A431186B20E20059121F /* chatbubbles_1@2x.png */; };
+		0058CBD71CC412DD0091E9DF /* PAWStartChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853D0B186C17F4000A04E3 /* PAWStartChatViewController.xib */; };
+		0058CBD81CC412DD0091E9DF /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE617B6C1B2453A900808DFA /* button@2x.png */; };
+		0058CBD91CC412DD0091E9DF /* screen1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A444186B20E20059121F /* screen1_3.png */; };
+		0058CBDA1CC412DD0091E9DF /* chatbubbles_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43B186B20E20059121F /* chatbubbles_6@2x.png */; };
+		0058CBDB1CC412DD0091E9DF /* screen5_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A456186B20E20059121F /* screen5_4.png */; };
+		0058CBDC1CC412DD0091E9DF /* screen1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A442186B20E20059121F /* screen1_2.png */; };
+		0058CBDD1CC412DD0091E9DF /* AutoSuggestTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6952B41AD9A031004044D4 /* AutoSuggestTableView.xib */; };
+		0058CBDE1CC412DD0091E9DF /* orangepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8D18F8344500B0756B /* orangepin@2x.png */; };
+		0058CBDF1CC412DD0091E9DF /* bluepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8918F8344400B0756B /* bluepin@2x.png */; };
+		0058CBE01CC412DD0091E9DF /* screen5_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A452186B20E20059121F /* screen5_2.png */; };
+		0058CBE11CC412DD0091E9DF /* screen6_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45D186B20E20059121F /* screen6_3@2x.png */; };
+		0058CBE21CC412DD0091E9DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D0E186C19C1000A04E3 /* Default-568h@2x.png */; };
+		0058CBE31CC412DD0091E9DF /* orangecircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD0B1B7601A300A3BF4F /* orangecircle@2x.png */; };
+		0058CBE41CC412DD0091E9DF /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4529811B7504DC00078FFE /* search@2x.png */; };
+		0058CBE51CC412DD0091E9DF /* screen6_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45E186B20E20059121F /* screen6_4.png */; };
+		0058CBE61CC412DD0091E9DF /* nav_create.png in Resources */ = {isa = PBXBuildFile; fileRef = 4030051E186D74380086869B /* nav_create.png */; };
+		0058CBE71CC412DD0091E9DF /* nav_back1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D06186C151C000A04E3 /* nav_back1@2x.png */; };
+		0058CBE81CC412DD0091E9DF /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D31C95B1B6FDE840006CCB0 /* zbar-samples.png */; };
+		0058CBE91CC412DD0091E9DF /* screen9_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A465186B20E20059121F /* screen9_2@2x.png */; };
+		0058CBEA1CC412DD0091E9DF /* screen3_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44D186B20E20059121F /* screen3_2@2x.png */; };
+		0058CBEB1CC412DD0091E9DF /* DropboxBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0029E4D11CC08FA80099D033 /* DropboxBrowserViewController.xib */; };
+		0058CBEC1CC412DD0091E9DF /* trianle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A535491C8D34E000382ABC /* trianle@2x.png */; };
+		0058CBED1CC412DD0091E9DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E56E83FF14D72E1100E856AB /* InfoPlist.strings */; };
+		0058CBEE1CC412DD0091E9DF /* screen9_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A463186B20E20059121F /* screen9_1@2x.png */; };
+		0058CBEF1CC412DD0091E9DF /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B3E8441C16A01D0005F97E /* refresh@2x.png */; };
+		0058CBF01CC412DD0091E9DF /* screen6_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A459186B20E20059121F /* screen6_1@2x.png */; };
+		0058CBF11CC412DD0091E9DF /* PAWInboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAB056A1AFA1FD1006D6066 /* PAWInboxTableViewCell.xib */; };
+		0058CBF21CC412DD0091E9DF /* screen2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A448186B20E20059121F /* screen2_2.png */; };
+		0058CBF31CC412DD0091E9DF /* grayBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CFF186C1123000A04E3 /* grayBubble.png */; };
+		0058CBF41CC412DD0091E9DF /* PAWWallPostCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853CF2186C10D1000A04E3 /* PAWWallPostCreateViewController.xib */; };
+		0058CBF51CC412DD0091E9DF /* PAWWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CAAFE914D7316F00D97A18 /* PAWWelcomeViewController.xib */; };
+		0058CBF61CC412DD0091E9DF /* chatbubbles_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A435186B20E20059121F /* chatbubbles_3@2x.png */; };
+		0058CBF71CC412DD0091E9DF /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51AC19ADE70600081378 /* icon-120.png */; };
+		0058CBF81CC412DD0091E9DF /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CD4186C0F6B000A04E3 /* nav_back@2x.png */; };
+		0058CBF91CC412DD0091E9DF /* greybar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D45297E1B7504DC00078FFE /* greybar@2x.png */; };
+		0058CBFA1CC412DD0091E9DF /* dollarblack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED83FBC1B78E2CA00AEBEEE /* dollarblack@2x.png */; };
+		0058CBFB1CC412DD0091E9DF /* screen11_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43D186B20E20059121F /* screen11_1@2x.png */; };
+		0058CBFC1CC412DD0091E9DF /* boxes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D45297C1B7504DC00078FFE /* boxes@2x.png */; };
+		0058CBFD1CC412DD0091E9DF /* calendar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E36C1B8F1CDB005DC3CB /* calendar-icon@2x.png */; };
+		0058CBFE1CC412DD0091E9DF /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6952291AD22713004044D4 /* OverlayViewController.xib */; };
+		0058CBFF1CC412DD0091E9DF /* nav_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D15186C2302000A04E3 /* nav_done.png */; };
+		0058CC001CC412DD0091E9DF /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D31C9581B6FDE840006CCB0 /* zbar-back.png */; };
+		0058CC011CC412DD0091E9DF /* screen2_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A449186B20E20059121F /* screen2_2@2x.png */; };
+		0058CC021CC412DD0091E9DF /* backgroundStart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC441B6A67E200D515CD /* backgroundStart@2x.png */; };
+		0058CC031CC412DD0091E9DF /* getstarted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC451B6A67E200D515CD /* getstarted@2x.png */; };
+		0058CC041CC412DD0091E9DF /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D31C9591B6FDE840006CCB0 /* zbar-help.html */; };
+		0058CC051CC412DD0091E9DF /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 002C90251C226E600036436D /* cross@2x.png */; };
+		0058CC061CC412DD0091E9DF /* redpin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E25C3F1BBF5AF2004DA65A /* redpin1.png */; };
+		0058CC071CC412DD0091E9DF /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD071B76006B00A3BF4F /* ChatRoomTableViewCell.xib */; };
+		0058CC081CC412DD0091E9DF /* calendar-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E36D1B8F1CDB005DC3CB /* calendar-icon@3x.png */; };
+		0058CC091CC412DD0091E9DF /* screen6_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45A186B20E20059121F /* screen6_2.png */; };
+		0058CC0A1CC412DD0091E9DF /* chatbubbles_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A434186B20E20059121F /* chatbubbles_3.png */; };
+		0058CC0B1CC412DD0091E9DF /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4529791B75036400078FFE /* TabView.xib */; };
+		0058CC0C1CC412DD0091E9DF /* bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1E94B51AF56516001A6324 /* bell@2x.png */; };
+		0058CC0D1CC412DD0091E9DF /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E3711B8F1CDB005DC3CB /* time@3x.png */; };
+		0058CC0E1CC412DD0091E9DF /* chatbubbles_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43A186B20E20059121F /* chatbubbles_6.png */; };
+		0058CC0F1CC412DD0091E9DF /* greenpin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8B18F8344500B0756B /* greenpin@2x.png */; };
+		0058CC101CC412DD0091E9DF /* screen6_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A458186B20E20059121F /* screen6_1.png */; };
+		0058CC111CC412DD0091E9DF /* opencircle3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4529891B7505D300078FFE /* opencircle3.png */; };
+		0058CC121CC412DD0091E9DF /* screen4_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44F186B20E20059121F /* screen4_1@2x.png */; };
+		0058CC131CC412DD0091E9DF /* redpin1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E25C401BBF5AF2004DA65A /* redpin1@2x.png */; };
+		0058CC141CC412DD0091E9DF /* backgroundMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD031B75FE4300A3BF4F /* backgroundMap@2x.png */; };
+		0058CC151CC412DD0091E9DF /* screen5_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A453186B20E20059121F /* screen5_2@2x.png */; };
+		0058CC161CC412DD0091E9DF /* chatbubbles_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A430186B20E20059121F /* chatbubbles_1.png */; };
+		0058CC171CC412DD0091E9DF /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4529801B7504DC00078FFE /* plus@2x.png */; };
+		0058CC181CC412DD0091E9DF /* screen1_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A4A0186B28190059121F /* screen1_4.png */; };
+		0058CC191CC412DD0091E9DF /* screen3_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44C186B20E20059121F /* screen3_2.png */; };
+		0058CC1A1CC412DD0091E9DF /* chatbubbles_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A433186B20E20059121F /* chatbubbles_2@2x.png */; };
+		0058CC1B1CC412DD0091E9DF /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CD3186C0F6B000A04E3 /* nav_back.png */; };
+		0058CC1C1CC412DD0091E9DF /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC3E1B6A648300D515CD /* login@2x.png */; };
+		0058CC1D1CC412DD0091E9DF /* purplepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8F18F8344500B0756B /* purplepin@2x.png */; };
+		0058CC1E1CC412DD0091E9DF /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC3F1B6A648300D515CD /* signup@2x.png */; };
+		0058CC1F1CC412DD0091E9DF /* ChatRoomTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED83FBA1B78D97C00AEBEEE /* ChatRoomTable.xib */; };
+		0058CC201CC412DD0091E9DF /* nav_done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D16186C2302000A04E3 /* nav_done@2x.png */; };
+		0058CC211CC412DD0091E9DF /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D31C95A1B6FDE840006CCB0 /* zbar-helpicons.png */; };
+		0058CC221CC412DD0091E9DF /* backgroundLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC3C1B6A648300D515CD /* backgroundLogin@2x.png */; };
+		0058CC231CC412DD0091E9DF /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51A719ADE70600081378 /* icon29.png */; };
+		0058CC241CC412DD0091E9DF /* screen11_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43C186B20E20059121F /* screen11_1.png */; };
+		0058CC251CC412DD0091E9DF /* screen5_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A451186B20E20059121F /* screen5_1@2x.png */; };
+		0058CC261CC412DD0091E9DF /* bell1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D45297B1B7504DC00078FFE /* bell1@2x.png */; };
+		0058CC271CC412DD0091E9DF /* screen1_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A443186B20E20059121F /* screen1_2@2x.png */; };
+		0058CC281CC412DD0091E9DF /* screen6_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A460186B20E20059121F /* screen6_5.png */; };
+		0058CC291CC412DD0091E9DF /* UIAlertView-Blocks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 56B6855F19B063CB0040AF41 /* UIAlertView-Blocks.podspec */; };
+		0058CC2A1CC412DD0091E9DF /* screen5_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A450186B20E20059121F /* screen5_1.png */; };
+		0058CC2B1CC412DD0091E9DF /* fbconnect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D39DEC21B30BF1B0091926E /* fbconnect@2x.png */; };
+		0058CC2C1CC412DD0091E9DF /* icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51AA19ADE70600081378 /* icon-58.png */; };
+		0058CC2D1CC412DD0091E9DF /* screen5_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A457186B20E20059121F /* screen5_4@2x.png */; };
+		0058CC2E1CC412DD0091E9DF /* screen1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A440186B20E20059121F /* screen1_1.png */; };
+		0058CC2F1CC412DD0091E9DF /* orangebar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D45297F1B7504DC00078FFE /* orangebar@2x.png */; };
+		0058CC301CC412DD0091E9DF /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E0FC8B1876631100A090B0 /* Images-2.xcassets */; };
+		0058CC311CC412DD0091E9DF /* grayBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D00186C1123000A04E3 /* grayBubble@2x.png */; };
+		0058CC321CC412DD0091E9DF /* nav_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CD5186C0F6B000A04E3 /* nav_cancel.png */; };
+		0058CC331CC412DD0091E9DF /* icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51A919ADE70600081378 /* icon57x57.png */; };
+		0058CC341CC412DD0091E9DF /* PAWPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BC8831187A4CE100FE35FB /* PAWPhotoViewController.xib */; };
+		0058CC351CC412DD0091E9DF /* nav_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CD6186C0F6B000A04E3 /* nav_cancel@2x.png */; };
+		0058CC361CC412DD0091E9DF /* down-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E36E1B8F1CDB005DC3CB /* down-arrow@2x.png */; };
+		0058CC371CC412DD0091E9DF /* screen3_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44A186B20E20059121F /* screen3_1.png */; };
+		0058CC381CC412DD0091E9DF /* starcolor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD0C1B7601A300A3BF4F /* starcolor@2x.png */; };
+		0058CC391CC412DD0091E9DF /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E3701B8F1CDB005DC3CB /* time@2x.png */; };
+		0058CC3A1CC412DD0091E9DF /* down-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE63E36F1B8F1CDB005DC3CB /* down-arrow@3x.png */; };
+		0058CC3B1CC412DD0091E9DF /* PAWForgotPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853CE2186C105D000A04E3 /* PAWForgotPwdViewController.xib */; };
+		0058CC3C1CC412DD0091E9DF /* redpin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE9118F8344500B0756B /* redpin@2x.png */; };
+		0058CC3D1CC412DD0091E9DF /* screen9_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A462186B20E20059121F /* screen9_1.png */; };
+		0058CC3E1CC412DD0091E9DF /* PAWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853CE5186C105D000A04E3 /* PAWLoginViewController.xib */; };
+		0058CC3F1CC412DD0091E9DF /* screen1_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A4A1186B28190059121F /* screen1_4@2x.png */; };
+		0058CC401CC412DD0091E9DF /* nav_signout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 402F44E71875A99B00284171 /* nav_signout@2x.png */; };
+		0058CC411CC412DD0091E9DF /* chatbubbles_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A436186B20E20059121F /* chatbubbles_4.png */; };
+		0058CC421CC412DD0091E9DF /* screen1_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A445186B20E20059121F /* screen1_3@2x.png */; };
+		0058CC431CC412DD0091E9DF /* chatbubbles_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A437186B20E20059121F /* chatbubbles_4@2x.png */; };
+		0058CC441CC412DD0091E9DF /* screen12_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43F186B20E20059121F /* screen12_1@2x.png */; };
+		0058CC451CC412DD0091E9DF /* PlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED6D9D61AD9B4A30001C381 /* PlaceView.xib */; };
+		0058CC461CC412DD0091E9DF /* googlemap.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D45297D1B7504DC00078FFE /* googlemap.png */; };
+		0058CC471CC412DD0091E9DF /* nav_create@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4030051F186D74380086869B /* nav_create@2x.png */; };
+		0058CC481CC412DD0091E9DF /* chatbubbles_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A438186B20E20059121F /* chatbubbles_5.png */; };
+		0058CC491CC412DD0091E9DF /* screen1_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A441186B20E20059121F /* screen1_1@2x.png */; };
+		0058CC4A1CC412DD0091E9DF /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC3D1B6A648300D515CD /* facebook@2x.png */; };
+		0058CC4B1CC412DD0091E9DF /* PAWWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4030054E186E5D240086869B /* PAWWallViewController.xib */; };
+		0058CC4C1CC412DD0091E9DF /* screen6_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A461186B20E20059121F /* screen6_5@2x.png */; };
+		0058CC4D1CC412DD0091E9DF /* chatbubbles_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A432186B20E20059121F /* chatbubbles_2.png */; };
+		0058CC4E1CC412DD0091E9DF /* screen5_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A454186B20E20059121F /* screen5_3.png */; };
+		0058CC4F1CC412DD0091E9DF /* icon-114-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BC51A819ADE70600081378 /* icon-114-114.png */; };
+		0058CC501CC412DD0091E9DF /* screen6_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45C186B20E20059121F /* screen6_3.png */; };
+		0058CC511CC412DD0091E9DF /* whiteblock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD0D1B7601A300A3BF4F /* whiteblock@2x.png */; };
+		0058CC521CC412DD0091E9DF /* blueBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CFE186C1123000A04E3 /* blueBubble@2x.png */; };
+		0058CC531CC412DD0091E9DF /* PAWGetStartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4EBC4B1B6A686F00D515CD /* PAWGetStartVC.xib */; };
+		0058CC541CC412DD0091E9DF /* screen9_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A464186B20E20059121F /* screen9_2.png */; };
+		0058CC551CC412DD0091E9DF /* nav_back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853D05186C151C000A04E3 /* nav_back1.png */; };
+		0058CC561CC412DD0091E9DF /* screen5_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A455186B20E20059121F /* screen5_3@2x.png */; };
+		0058CC571CC412DD0091E9DF /* leftArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEDB363D1AEE2EAD0061C8B9 /* leftArrow@2x.png */; };
+		0058CC581CC412DD0091E9DF /* PAWChooseChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853D20186C66E3000A04E3 /* PAWChooseChatRoomViewController.xib */; };
+		0058CC591CC412DD0091E9DF /* screen6_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A45B186B20E20059121F /* screen6_2@2x.png */; };
+		0058CC5A1CC412DD0091E9DF /* screen9_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A467186B20E20059121F /* screen9_3@2x.png */; };
+		0058CC5B1CC412DD0091E9DF /* screen2_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A447186B20E20059121F /* screen2_1@2x.png */; };
+		0058CC5C1CC412DD0091E9DF /* screen2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A446186B20E20059121F /* screen2_1.png */; };
+		0058CC5D1CC412DD0091E9DF /* Anywall-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74D131E51582A7420065F1D2 /* Anywall-Info.plist */; };
+		0058CC5E1CC412DD0091E9DF /* dollargrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AED83FBD1B78E2CA00AEBEEE /* dollargrey@2x.png */; };
+		0058CC5F1CC412DD0091E9DF /* PAWInboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAB05651AFA1543006D6066 /* PAWInboxViewController.xib */; };
+		0058CC601CC412DD0091E9DF /* screen12_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A43E186B20E20059121F /* screen12_1.png */; };
+		0058CC611CC412DD0091E9DF /* stargrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD151B76061200A3BF4F /* stargrey@2x.png */; };
+		0058CC621CC412DD0091E9DF /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEDB363E1AEE2EAD0061C8B9 /* rightArrow@2x.png */; };
+		0058CC631CC412DD0091E9DF /* blueBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 40853CFD186C1123000A04E3 /* blueBubble.png */; };
+		0058CC641CC412DD0091E9DF /* PAWEnterChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853D1B186C338F000A04E3 /* PAWEnterChatViewController.xib */; };
+		0058CC651CC412DD0091E9DF /* screen9_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A466186B20E20059121F /* screen9_3.png */; };
+		0058CC661CC412DD0091E9DF /* screen4_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099A44E186B20E20059121F /* screen4_1.png */; };
+		0058CC671CC412DD0091E9DF /* PAWNewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40853CE8186C105D000A04E3 /* PAWNewUserViewController.xib */; };
+		0058CC681CC412DD0091E9DF /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7BD0A1B7601A300A3BF4F /* location@2x.png */; };
+		0058CC691CC412DD0091E9DF /* PAWSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4E85E01B82D73B00CAB221 /* PAWSettingViewController.xib */; };
 		0060A3FE1BF7F7BE003DAAC9 /* UnderLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0060A3FD1BF7F7BE003DAAC9 /* UnderLineLabel.m */; };
 		008E92571BDB3EEA005EAF25 /* libzbar-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 008E92561BDB3EEA005EAF25 /* libzbar-sim.a */; };
 		00A535471C8D17FC00382ABC /* HTHorizontalSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A535441C8D17FC00382ABC /* HTHorizontalSelectionList.m */; };
 		00A535481C8D17FC00382ABC /* HTHorizontalSelectionListScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A535461C8D17FC00382ABC /* HTHorizontalSelectionListScrollView.m */; };
 		00A5354A1C8D34E100382ABC /* trianle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A535491C8D34E000382ABC /* trianle@2x.png */; };
 		00B3E8451C16A01D0005F97E /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B3E8441C16A01D0005F97E /* refresh@2x.png */; };
+		00BAA5DF1CD3112400DD9EA3 /* DropBoxFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BAA5DE1CD3112400DD9EA3 /* DropBoxFileView.m */; };
+		00BAA5E11CD3115C00DD9EA3 /* DropBoxFileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BAA5E01CD3115C00DD9EA3 /* DropBoxFileView.xib */; };
+		00BAA5E31CD312D300DD9EA3 /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BAA5E21CD312D300DD9EA3 /* folder@2x.png */; };
 		00E25C411BBF5AF2004DA65A /* redpin1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E25C3F1BBF5AF2004DA65A /* redpin1.png */; };
 		00E25C421BBF5AF2004DA65A /* redpin1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E25C401BBF5AF2004DA65A /* redpin1@2x.png */; };
+		00E2EB5F1CB5E7B600C718F0 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E2EB5E1CB5E7B600C718F0 /* DropboxSDK.framework */; };
+		00E2EB621CB5E87500C718F0 /* DropboxBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E2EB611CB5E87500C718F0 /* DropboxBrowserViewController.m */; };
 		04A3BE9318F8344500B0756B /* bluepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8918F8344400B0756B /* bluepin@2x.png */; };
 		04A3BE9518F8344500B0756B /* greenpin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8B18F8344500B0756B /* greenpin@2x.png */; };
 		04A3BE9718F8344500B0756B /* orangepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3BE8D18F8344500B0756B /* orangepin@2x.png */; };
@@ -258,7 +519,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0029E4D11CC08FA80099D033 /* DropboxBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DropboxBrowserViewController.xib; path = anywall/DropboxBrowserViewController.xib; sourceTree = SOURCE_ROOT; };
+		0029E4D31CC08FE70099D033 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		0029E4D51CC090120099D033 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		002C90251C226E600036436D /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		0058CC6F1CC412DD0091E9DF /* Anywall copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anywall copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0058CC701CC412DE0091E9DF /* Anywall copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Anywall copy-Info.plist"; path = "/Users/mobileprogramming/Projects/Lokay_iOS8 2/Anywall copy-Info.plist"; sourceTree = "<absolute>"; };
 		0060A3FC1BF7F7BE003DAAC9 /* UnderLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnderLineLabel.h; sourceTree = "<group>"; };
 		0060A3FD1BF7F7BE003DAAC9 /* UnderLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnderLineLabel.m; sourceTree = "<group>"; };
 		008E92561BDB3EEA005EAF25 /* libzbar-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libzbar-sim.a"; path = "anywall/ZBarSDK/Headers/libzbar-sim.a"; sourceTree = SOURCE_ROOT; };
@@ -268,8 +534,15 @@
 		00A535461C8D17FC00382ABC /* HTHorizontalSelectionListScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTHorizontalSelectionListScrollView.m; sourceTree = "<group>"; };
 		00A535491C8D34E000382ABC /* trianle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trianle@2x.png"; sourceTree = "<group>"; };
 		00B3E8441C16A01D0005F97E /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
+		00BAA5DD1CD3112400DD9EA3 /* DropBoxFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropBoxFileView.h; path = anywall/DropBoxFileView.h; sourceTree = SOURCE_ROOT; };
+		00BAA5DE1CD3112400DD9EA3 /* DropBoxFileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropBoxFileView.m; path = anywall/DropBoxFileView.m; sourceTree = SOURCE_ROOT; };
+		00BAA5E01CD3115C00DD9EA3 /* DropBoxFileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxFileView.xib; sourceTree = "<group>"; };
+		00BAA5E21CD312D300DD9EA3 /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder@2x.png"; sourceTree = "<group>"; };
 		00E25C3F1BBF5AF2004DA65A /* redpin1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin1.png; sourceTree = "<group>"; };
 		00E25C401BBF5AF2004DA65A /* redpin1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpin1@2x.png"; sourceTree = "<group>"; };
+		00E2EB5E1CB5E7B600C718F0 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		00E2EB601CB5E87500C718F0 /* DropboxBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxBrowserViewController.h; sourceTree = "<group>"; };
+		00E2EB611CB5E87500C718F0 /* DropboxBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxBrowserViewController.m; sourceTree = "<group>"; };
 		04A3BE8918F8344400B0756B /* bluepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluepin@2x.png"; sourceTree = "<group>"; };
 		04A3BE8B18F8344500B0756B /* greenpin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenpin@2x.png"; sourceTree = "<group>"; };
 		04A3BE8D18F8344500B0756B /* orangepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangepin@2x.png"; sourceTree = "<group>"; };
@@ -596,6 +869,48 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0058CBAC1CC412DD0091E9DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0058CBAD1CC412DD0091E9DF /* libiconv.dylib in Frameworks */,
+				0058CBAE1CC412DD0091E9DF /* CoreVideo.framework in Frameworks */,
+				0058CBAF1CC412DD0091E9DF /* CoreMedia.framework in Frameworks */,
+				0058CBB01CC412DD0091E9DF /* AVFoundation.framework in Frameworks */,
+				0058CBB11CC412DD0091E9DF /* Social.framework in Frameworks */,
+				0058CBB21CC412DD0091E9DF /* libzbar.a in Frameworks */,
+				0058CBB31CC412DD0091E9DF /* libzbar.a in Frameworks */,
+				0058CBB41CC412DD0091E9DF /* libsqlite3.0.dylib in Frameworks */,
+				0058CBB51CC412DD0091E9DF /* Accounts.framework in Frameworks */,
+				0058CBB61CC412DD0091E9DF /* StoreKit.framework in Frameworks */,
+				0058CBB71CC412DD0091E9DF /* libz.dylib in Frameworks */,
+				0058CBB81CC412DD0091E9DF /* MessageUI.framework in Frameworks */,
+				0058CBB91CC412DD0091E9DF /* QuartzCore.framework in Frameworks */,
+				0058CBBA1CC412DD0091E9DF /* Security.framework in Frameworks */,
+				0058CBBB1CC412DD0091E9DF /* libz.1.1.3.dylib in Frameworks */,
+				0058CBBC1CC412DD0091E9DF /* MobileCoreServices.framework in Frameworks */,
+				0058CBBD1CC412DD0091E9DF /* SystemConfiguration.framework in Frameworks */,
+				0058CBBE1CC412DD0091E9DF /* CFNetwork.framework in Frameworks */,
+				0058CBBF1CC412DD0091E9DF /* AudioToolbox.framework in Frameworks */,
+				0058CBC01CC412DD0091E9DF /* ParseCrashReporting.framework in Frameworks */,
+				0058CBC11CC412DD0091E9DF /* CoreGraphics.framework in Frameworks */,
+				0058CBC21CC412DD0091E9DF /* CoreLocation.framework in Frameworks */,
+				0058CBC31CC412DD0091E9DF /* ParseFacebookUtils.framework in Frameworks */,
+				0058CBC41CC412DD0091E9DF /* Parse.framework in Frameworks */,
+				0058CBC51CC412DD0091E9DF /* libzbar-sim.a in Frameworks */,
+				0058CBC61CC412DD0091E9DF /* FBSDKCoreKit.framework in Frameworks */,
+				0058CBC71CC412DD0091E9DF /* MapKit.framework in Frameworks */,
+				0058CBC81CC412DD0091E9DF /* UIKit.framework in Frameworks */,
+				0058CBC91CC412DD0091E9DF /* FacebookSDK.framework in Frameworks */,
+				0058CBCA1CC412DD0091E9DF /* Bolts.framework in Frameworks */,
+				0058CBCB1CC412DD0091E9DF /* DropboxSDK.framework in Frameworks */,
+				0058CBCC1CC412DD0091E9DF /* DropboxSDK.framework in Frameworks */,
+				0058CBCD1CC412DD0091E9DF /* Foundation.framework in Frameworks */,
+				0058CBCE1CC412DD0091E9DF /* ParseUI.framework in Frameworks */,
+				0058CBCF1CC412DD0091E9DF /* FBAudienceNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E56E83EF14D72E1100E856AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -625,10 +940,13 @@
 				2D2FE6EB1AD5DD3B00C0868B /* ParseFacebookUtils.framework in Frameworks */,
 				2D2FE6E91AD5DD3B00C0868B /* Parse.framework in Frameworks */,
 				008E92571BDB3EEA005EAF25 /* libzbar-sim.a in Frameworks */,
+				0029E4D61CC090120099D033 /* FBSDKCoreKit.framework in Frameworks */,
 				E5CAAFF814D7376500D97A18 /* MapKit.framework in Frameworks */,
 				E56E83F714D72E1100E856AB /* UIKit.framework in Frameworks */,
 				2D2FE6F41AD5E25C00C0868B /* FacebookSDK.framework in Frameworks */,
 				2D2FE6E81AD5DD3B00C0868B /* Bolts.framework in Frameworks */,
+				00E2EB5F1CB5E7B600C718F0 /* DropboxSDK.framework in Frameworks */,
+				0029E4D41CC08FE70099D033 /* DropboxSDK.framework in Frameworks */,
 				E56E83F914D72E1100E856AB /* Foundation.framework in Frameworks */,
 				2D2FE6ED1AD5DD3B00C0868B /* ParseUI.framework in Frameworks */,
 				2D2FE6F51AD5E25C00C0868B /* FBAudienceNetwork.framework in Frameworks */,
@@ -832,6 +1150,7 @@
 		4099A42F186B20E20059121F /* Lokay Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				00BAA5E21CD312D300DD9EA3 /* folder@2x.png */,
 				002C90251C226E600036436D /* cross@2x.png */,
 				00B3E8441C16A01D0005F97E /* refresh@2x.png */,
 				AE63E36C1B8F1CDB005DC3CB /* calendar-icon@2x.png */,
@@ -1068,6 +1387,7 @@
 				E56E83FC14D72E1100E856AB /* Anywall */,
 				E56E83F514D72E1100E856AB /* Frameworks */,
 				E56E83F314D72E1100E856AB /* Products */,
+				0058CC701CC412DE0091E9DF /* Anywall copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -1076,6 +1396,7 @@
 			isa = PBXGroup;
 			children = (
 				E56E83F214D72E1100E856AB /* Anywall.app */,
+				0058CC6F1CC412DD0091E9DF /* Anywall copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1083,6 +1404,9 @@
 		E56E83F514D72E1100E856AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0029E4D51CC090120099D033 /* FBSDKCoreKit.framework */,
+				0029E4D31CC08FE70099D033 /* DropboxSDK.framework */,
+				00E2EB5E1CB5E7B600C718F0 /* DropboxSDK.framework */,
 				2D31C9681B6FE0DA0006CCB0 /* libiconv.dylib */,
 				2D31C9661B6FE0830006CCB0 /* CoreVideo.framework */,
 				2D31C9641B6FDFEF0006CCB0 /* CoreMedia.framework */,
@@ -1120,6 +1444,9 @@
 		E56E83FC14D72E1100E856AB /* Anywall */ = {
 			isa = PBXGroup;
 			children = (
+				0029E4D11CC08FA80099D033 /* DropboxBrowserViewController.xib */,
+				00E2EB601CB5E87500C718F0 /* DropboxBrowserViewController.h */,
+				00E2EB611CB5E87500C718F0 /* DropboxBrowserViewController.m */,
 				00A535421C8D17FC00382ABC /* HTHorizontalSelectionList */,
 				2DF7BD121B76043700A3BF4F /* EDStarRating.h */,
 				2DF7BD131B76043700A3BF4F /* EDStarRating.m */,
@@ -1147,6 +1474,9 @@
 				E5CAAFF614D7342200D97A18 /* Controllers */,
 				4099A42F186B20E20059121F /* Lokay Graphics */,
 				E56E83FD14D72E1100E856AB /* Supporting Files */,
+				00BAA5DD1CD3112400DD9EA3 /* DropBoxFileView.h */,
+				00BAA5E01CD3115C00DD9EA3 /* DropBoxFileView.xib */,
+				00BAA5DE1CD3112400DD9EA3 /* DropBoxFileView.m */,
 			);
 			name = Anywall;
 			path = AnyWall;
@@ -1186,6 +1516,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0058CB691CC412DD0091E9DF /* Anywall copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0058CC6A1CC412DD0091E9DF /* Build configuration list for PBXNativeTarget "Anywall copy" */;
+			buildPhases = (
+				0058CB6A1CC412DD0091E9DF /* Sources */,
+				0058CBAC1CC412DD0091E9DF /* Frameworks */,
+				0058CBD01CC412DD0091E9DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Anywall copy";
+			productName = AnyWall;
+			productReference = 0058CC6F1CC412DD0091E9DF /* Anywall copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E56E83F114D72E1100E856AB /* Anywall */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E56E841014D72E1100E856AB /* Build configuration list for PBXNativeTarget "Anywall" */;
@@ -1212,6 +1559,9 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Parse;
 				TargetAttributes = {
+					0058CB691CC412DD0091E9DF = {
+						DevelopmentTeam = 2KAL3NND99;
+					};
 					E56E83F114D72E1100E856AB = {
 						DevelopmentTeam = URFF6F3TLT;
 					};
@@ -1230,11 +1580,172 @@
 			projectRoot = "";
 			targets = (
 				E56E83F114D72E1100E856AB /* Anywall */,
+				0058CB691CC412DD0091E9DF /* Anywall copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0058CBD01CC412DD0091E9DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0058CBD11CC412DD0091E9DF /* screen3_1@2x.png in Resources */,
+				0058CBD21CC412DD0091E9DF /* chatbubbles_5@2x.png in Resources */,
+				0058CBD31CC412DD0091E9DF /* screen6_4@2x.png in Resources */,
+				0058CBD41CC412DD0091E9DF /* nav_signout.png in Resources */,
+				0058CBD51CC412DD0091E9DF /* icon-80.png in Resources */,
+				0058CBD61CC412DD0091E9DF /* chatbubbles_1@2x.png in Resources */,
+				0058CBD71CC412DD0091E9DF /* PAWStartChatViewController.xib in Resources */,
+				0058CBD81CC412DD0091E9DF /* button@2x.png in Resources */,
+				0058CBD91CC412DD0091E9DF /* screen1_3.png in Resources */,
+				0058CBDA1CC412DD0091E9DF /* chatbubbles_6@2x.png in Resources */,
+				0058CBDB1CC412DD0091E9DF /* screen5_4.png in Resources */,
+				0058CBDC1CC412DD0091E9DF /* screen1_2.png in Resources */,
+				0058CBDD1CC412DD0091E9DF /* AutoSuggestTableView.xib in Resources */,
+				0058CBDE1CC412DD0091E9DF /* orangepin@2x.png in Resources */,
+				0058CBDF1CC412DD0091E9DF /* bluepin@2x.png in Resources */,
+				0058CBE01CC412DD0091E9DF /* screen5_2.png in Resources */,
+				0058CBE11CC412DD0091E9DF /* screen6_3@2x.png in Resources */,
+				0058CBE21CC412DD0091E9DF /* Default-568h@2x.png in Resources */,
+				0058CBE31CC412DD0091E9DF /* orangecircle@2x.png in Resources */,
+				0058CBE41CC412DD0091E9DF /* search@2x.png in Resources */,
+				0058CBE51CC412DD0091E9DF /* screen6_4.png in Resources */,
+				0058CBE61CC412DD0091E9DF /* nav_create.png in Resources */,
+				0058CBE71CC412DD0091E9DF /* nav_back1@2x.png in Resources */,
+				0058CBE81CC412DD0091E9DF /* zbar-samples.png in Resources */,
+				0058CBE91CC412DD0091E9DF /* screen9_2@2x.png in Resources */,
+				0058CBEA1CC412DD0091E9DF /* screen3_2@2x.png in Resources */,
+				0058CBEB1CC412DD0091E9DF /* DropboxBrowserViewController.xib in Resources */,
+				0058CBEC1CC412DD0091E9DF /* trianle@2x.png in Resources */,
+				0058CBED1CC412DD0091E9DF /* InfoPlist.strings in Resources */,
+				0058CBEE1CC412DD0091E9DF /* screen9_1@2x.png in Resources */,
+				0058CBEF1CC412DD0091E9DF /* refresh@2x.png in Resources */,
+				0058CBF01CC412DD0091E9DF /* screen6_1@2x.png in Resources */,
+				0058CBF11CC412DD0091E9DF /* PAWInboxTableViewCell.xib in Resources */,
+				0058CBF21CC412DD0091E9DF /* screen2_2.png in Resources */,
+				0058CBF31CC412DD0091E9DF /* grayBubble.png in Resources */,
+				0058CBF41CC412DD0091E9DF /* PAWWallPostCreateViewController.xib in Resources */,
+				0058CBF51CC412DD0091E9DF /* PAWWelcomeViewController.xib in Resources */,
+				0058CBF61CC412DD0091E9DF /* chatbubbles_3@2x.png in Resources */,
+				0058CBF71CC412DD0091E9DF /* icon-120.png in Resources */,
+				0058CBF81CC412DD0091E9DF /* nav_back@2x.png in Resources */,
+				0058CBF91CC412DD0091E9DF /* greybar@2x.png in Resources */,
+				0058CBFA1CC412DD0091E9DF /* dollarblack@2x.png in Resources */,
+				0058CBFB1CC412DD0091E9DF /* screen11_1@2x.png in Resources */,
+				0058CBFC1CC412DD0091E9DF /* boxes@2x.png in Resources */,
+				0058CBFD1CC412DD0091E9DF /* calendar-icon@2x.png in Resources */,
+				0058CBFE1CC412DD0091E9DF /* OverlayViewController.xib in Resources */,
+				0058CBFF1CC412DD0091E9DF /* nav_done.png in Resources */,
+				0058CC001CC412DD0091E9DF /* zbar-back.png in Resources */,
+				0058CC011CC412DD0091E9DF /* screen2_2@2x.png in Resources */,
+				0058CC021CC412DD0091E9DF /* backgroundStart@2x.png in Resources */,
+				0058CC031CC412DD0091E9DF /* getstarted@2x.png in Resources */,
+				0058CC041CC412DD0091E9DF /* zbar-help.html in Resources */,
+				0058CC051CC412DD0091E9DF /* cross@2x.png in Resources */,
+				0058CC061CC412DD0091E9DF /* redpin1.png in Resources */,
+				0058CC071CC412DD0091E9DF /* ChatRoomTableViewCell.xib in Resources */,
+				0058CC081CC412DD0091E9DF /* calendar-icon@3x.png in Resources */,
+				0058CC091CC412DD0091E9DF /* screen6_2.png in Resources */,
+				0058CC0A1CC412DD0091E9DF /* chatbubbles_3.png in Resources */,
+				0058CC0B1CC412DD0091E9DF /* TabView.xib in Resources */,
+				0058CC0C1CC412DD0091E9DF /* bell@2x.png in Resources */,
+				0058CC0D1CC412DD0091E9DF /* time@3x.png in Resources */,
+				0058CC0E1CC412DD0091E9DF /* chatbubbles_6.png in Resources */,
+				0058CC0F1CC412DD0091E9DF /* greenpin@2x.png in Resources */,
+				0058CC101CC412DD0091E9DF /* screen6_1.png in Resources */,
+				0058CC111CC412DD0091E9DF /* opencircle3.png in Resources */,
+				0058CC121CC412DD0091E9DF /* screen4_1@2x.png in Resources */,
+				0058CC131CC412DD0091E9DF /* redpin1@2x.png in Resources */,
+				0058CC141CC412DD0091E9DF /* backgroundMap@2x.png in Resources */,
+				0058CC151CC412DD0091E9DF /* screen5_2@2x.png in Resources */,
+				0058CC161CC412DD0091E9DF /* chatbubbles_1.png in Resources */,
+				0058CC171CC412DD0091E9DF /* plus@2x.png in Resources */,
+				0058CC181CC412DD0091E9DF /* screen1_4.png in Resources */,
+				0058CC191CC412DD0091E9DF /* screen3_2.png in Resources */,
+				0058CC1A1CC412DD0091E9DF /* chatbubbles_2@2x.png in Resources */,
+				0058CC1B1CC412DD0091E9DF /* nav_back.png in Resources */,
+				0058CC1C1CC412DD0091E9DF /* login@2x.png in Resources */,
+				0058CC1D1CC412DD0091E9DF /* purplepin@2x.png in Resources */,
+				0058CC1E1CC412DD0091E9DF /* signup@2x.png in Resources */,
+				0058CC1F1CC412DD0091E9DF /* ChatRoomTable.xib in Resources */,
+				0058CC201CC412DD0091E9DF /* nav_done@2x.png in Resources */,
+				0058CC211CC412DD0091E9DF /* zbar-helpicons.png in Resources */,
+				0058CC221CC412DD0091E9DF /* backgroundLogin@2x.png in Resources */,
+				0058CC231CC412DD0091E9DF /* icon29.png in Resources */,
+				0058CC241CC412DD0091E9DF /* screen11_1.png in Resources */,
+				0058CC251CC412DD0091E9DF /* screen5_1@2x.png in Resources */,
+				0058CC261CC412DD0091E9DF /* bell1@2x.png in Resources */,
+				0058CC271CC412DD0091E9DF /* screen1_2@2x.png in Resources */,
+				0058CC281CC412DD0091E9DF /* screen6_5.png in Resources */,
+				0058CC291CC412DD0091E9DF /* UIAlertView-Blocks.podspec in Resources */,
+				0058CC2A1CC412DD0091E9DF /* screen5_1.png in Resources */,
+				0058CC2B1CC412DD0091E9DF /* fbconnect@2x.png in Resources */,
+				0058CC2C1CC412DD0091E9DF /* icon-58.png in Resources */,
+				0058CC2D1CC412DD0091E9DF /* screen5_4@2x.png in Resources */,
+				0058CC2E1CC412DD0091E9DF /* screen1_1.png in Resources */,
+				0058CC2F1CC412DD0091E9DF /* orangebar@2x.png in Resources */,
+				0058CC301CC412DD0091E9DF /* Images-2.xcassets in Resources */,
+				0058CC311CC412DD0091E9DF /* grayBubble@2x.png in Resources */,
+				0058CC321CC412DD0091E9DF /* nav_cancel.png in Resources */,
+				0058CC331CC412DD0091E9DF /* icon57x57.png in Resources */,
+				0058CC341CC412DD0091E9DF /* PAWPhotoViewController.xib in Resources */,
+				0058CC351CC412DD0091E9DF /* nav_cancel@2x.png in Resources */,
+				0058CC361CC412DD0091E9DF /* down-arrow@2x.png in Resources */,
+				0058CC371CC412DD0091E9DF /* screen3_1.png in Resources */,
+				0058CC381CC412DD0091E9DF /* starcolor@2x.png in Resources */,
+				0058CC391CC412DD0091E9DF /* time@2x.png in Resources */,
+				0058CC3A1CC412DD0091E9DF /* down-arrow@3x.png in Resources */,
+				0058CC3B1CC412DD0091E9DF /* PAWForgotPwdViewController.xib in Resources */,
+				0058CC3C1CC412DD0091E9DF /* redpin@2x.png in Resources */,
+				0058CC3D1CC412DD0091E9DF /* screen9_1.png in Resources */,
+				0058CC3E1CC412DD0091E9DF /* PAWLoginViewController.xib in Resources */,
+				0058CC3F1CC412DD0091E9DF /* screen1_4@2x.png in Resources */,
+				0058CC401CC412DD0091E9DF /* nav_signout@2x.png in Resources */,
+				0058CC411CC412DD0091E9DF /* chatbubbles_4.png in Resources */,
+				0058CC421CC412DD0091E9DF /* screen1_3@2x.png in Resources */,
+				0058CC431CC412DD0091E9DF /* chatbubbles_4@2x.png in Resources */,
+				0058CC441CC412DD0091E9DF /* screen12_1@2x.png in Resources */,
+				0058CC451CC412DD0091E9DF /* PlaceView.xib in Resources */,
+				0058CC461CC412DD0091E9DF /* googlemap.png in Resources */,
+				0058CC471CC412DD0091E9DF /* nav_create@2x.png in Resources */,
+				0058CC481CC412DD0091E9DF /* chatbubbles_5.png in Resources */,
+				0058CC491CC412DD0091E9DF /* screen1_1@2x.png in Resources */,
+				0058CC4A1CC412DD0091E9DF /* facebook@2x.png in Resources */,
+				0058CC4B1CC412DD0091E9DF /* PAWWallViewController.xib in Resources */,
+				0058CC4C1CC412DD0091E9DF /* screen6_5@2x.png in Resources */,
+				0058CC4D1CC412DD0091E9DF /* chatbubbles_2.png in Resources */,
+				0058CC4E1CC412DD0091E9DF /* screen5_3.png in Resources */,
+				0058CC4F1CC412DD0091E9DF /* icon-114-114.png in Resources */,
+				0058CC501CC412DD0091E9DF /* screen6_3.png in Resources */,
+				0058CC511CC412DD0091E9DF /* whiteblock@2x.png in Resources */,
+				0058CC521CC412DD0091E9DF /* blueBubble@2x.png in Resources */,
+				0058CC531CC412DD0091E9DF /* PAWGetStartVC.xib in Resources */,
+				0058CC541CC412DD0091E9DF /* screen9_2.png in Resources */,
+				0058CC551CC412DD0091E9DF /* nav_back1.png in Resources */,
+				0058CC561CC412DD0091E9DF /* screen5_3@2x.png in Resources */,
+				0058CC571CC412DD0091E9DF /* leftArrow@2x.png in Resources */,
+				0058CC581CC412DD0091E9DF /* PAWChooseChatRoomViewController.xib in Resources */,
+				0058CC591CC412DD0091E9DF /* screen6_2@2x.png in Resources */,
+				0058CC5A1CC412DD0091E9DF /* screen9_3@2x.png in Resources */,
+				0058CC5B1CC412DD0091E9DF /* screen2_1@2x.png in Resources */,
+				0058CC5C1CC412DD0091E9DF /* screen2_1.png in Resources */,
+				0058CC5D1CC412DD0091E9DF /* Anywall-Info.plist in Resources */,
+				0058CC5E1CC412DD0091E9DF /* dollargrey@2x.png in Resources */,
+				0058CC5F1CC412DD0091E9DF /* PAWInboxViewController.xib in Resources */,
+				0058CC601CC412DD0091E9DF /* screen12_1.png in Resources */,
+				0058CC611CC412DD0091E9DF /* stargrey@2x.png in Resources */,
+				0058CC621CC412DD0091E9DF /* rightArrow@2x.png in Resources */,
+				0058CC631CC412DD0091E9DF /* blueBubble.png in Resources */,
+				0058CC641CC412DD0091E9DF /* PAWEnterChatViewController.xib in Resources */,
+				0058CC651CC412DD0091E9DF /* screen9_3.png in Resources */,
+				0058CC661CC412DD0091E9DF /* screen4_1.png in Resources */,
+				0058CC671CC412DD0091E9DF /* PAWNewUserViewController.xib in Resources */,
+				0058CC681CC412DD0091E9DF /* location@2x.png in Resources */,
+				0058CC691CC412DD0091E9DF /* PAWSettingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E56E83F014D72E1100E856AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1265,6 +1776,7 @@
 				2D31C9631B6FDE850006CCB0 /* zbar-samples.png in Resources */,
 				4099A49D186B20E20059121F /* screen9_2@2x.png in Resources */,
 				4099A485186B20E20059121F /* screen3_2@2x.png in Resources */,
+				0029E4D21CC08FA80099D033 /* DropboxBrowserViewController.xib in Resources */,
 				00A5354A1C8D34E100382ABC /* trianle@2x.png in Resources */,
 				E56E840114D72E1100E856AB /* InfoPlist.strings in Resources */,
 				4099A49B186B20E20059121F /* screen9_1@2x.png in Resources */,
@@ -1275,6 +1787,7 @@
 				40853D03186C1123000A04E3 /* grayBubble.png in Resources */,
 				40853CF9186C10D1000A04E3 /* PAWWallPostCreateViewController.xib in Resources */,
 				E5CAAFEB14D7316F00D97A18 /* PAWWelcomeViewController.xib in Resources */,
+				00BAA5E31CD312D300DD9EA3 /* folder@2x.png in Resources */,
 				4099A46D186B20E20059121F /* chatbubbles_3@2x.png in Resources */,
 				56BC51B219ADE70600081378 /* icon-120.png in Resources */,
 				40853CD8186C0F6B000A04E3 /* nav_back@2x.png in Resources */,
@@ -1339,6 +1852,7 @@
 				56BC51AF19ADE70600081378 /* icon57x57.png in Resources */,
 				40BC8833187A4CE100FE35FB /* PAWPhotoViewController.xib in Resources */,
 				40853CDA186C0F6B000A04E3 /* nav_cancel@2x.png in Resources */,
+				00BAA5E11CD3115C00DD9EA3 /* DropBoxFileView.xib in Resources */,
 				AE63E3741B8F1CDB005DC3CB /* down-arrow@2x.png in Resources */,
 				4099A482186B20E20059121F /* screen3_1.png in Resources */,
 				2DF7BD101B7601A300A3BF4F /* starcolor@2x.png in Resources */,
@@ -1397,6 +1911,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0058CB6A1CC412DD0091E9DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0058CB6B1CC412DD0091E9DF /* AFHTTPRequestOperation.m in Sources */,
+				0058CB6C1CC412DD0091E9DF /* PAWChooseChatRoomViewController.m in Sources */,
+				0058CB6D1CC412DD0091E9DF /* AFImageRequestOperation.m in Sources */,
+				0058CB6E1CC412DD0091E9DF /* RIButtonItem.m in Sources */,
+				0058CB6F1CC412DD0091E9DF /* MGMessage.m in Sources */,
+				0058CB701CC412DD0091E9DF /* SBJsonWriter.m in Sources */,
+				0058CB711CC412DD0091E9DF /* CustomBadge.m in Sources */,
+				0058CB721CC412DD0091E9DF /* DropboxBrowserViewController.m in Sources */,
+				0058CB731CC412DD0091E9DF /* MBProgressHUD.m in Sources */,
+				0058CB741CC412DD0091E9DF /* SBJsonBase.m in Sources */,
+				0058CB751CC412DD0091E9DF /* PAWInboxTableViewCell.m in Sources */,
+				0058CB761CC412DD0091E9DF /* PAWCircleView.m in Sources */,
+				0058CB771CC412DD0091E9DF /* AFHTTPClient.m in Sources */,
+				0058CB781CC412DD0091E9DF /* QBPlasticPopupMenu.m in Sources */,
+				0058CB791CC412DD0091E9DF /* HTHorizontalSelectionList.m in Sources */,
+				0058CB7A1CC412DD0091E9DF /* SBJsonParser.m in Sources */,
+				0058CB7B1CC412DD0091E9DF /* PAWPost.m in Sources */,
+				0058CB7C1CC412DD0091E9DF /* UIAlertView+Blocks.m in Sources */,
+				0058CB7D1CC412DD0091E9DF /* BadgeStyle.m in Sources */,
+				0058CB7E1CC412DD0091E9DF /* HTHorizontalSelectionListScrollView.m in Sources */,
+				0058CB7F1CC412DD0091E9DF /* Mailgun.m in Sources */,
+				0058CB801CC412DD0091E9DF /* main.m in Sources */,
+				0058CB811CC412DD0091E9DF /* NSObject+SBJSON.m in Sources */,
+				0058CB821CC412DD0091E9DF /* QBPopupMenuOverlayView.m in Sources */,
+				0058CB831CC412DD0091E9DF /* SBJSON.m in Sources */,
+				0058CB841CC412DD0091E9DF /* PAWAppDelegate.m in Sources */,
+				0058CB851CC412DD0091E9DF /* OverlayViewController.m in Sources */,
+				0058CB861CC412DD0091E9DF /* PAWChatRoomView.m in Sources */,
+				0058CB871CC412DD0091E9DF /* TabView.m in Sources */,
+				0058CB881CC412DD0091E9DF /* AFPropertyListRequestOperation.m in Sources */,
+				0058CB891CC412DD0091E9DF /* AFURLConnectionOperation.m in Sources */,
+				0058CB8A1CC412DD0091E9DF /* ChatRoomTableViewCell.m in Sources */,
+				0058CB8B1CC412DD0091E9DF /* QBPopupMenuPagenatorView.m in Sources */,
+				0058CB8C1CC412DD0091E9DF /* QBPopupMenu.m in Sources */,
+				0058CB8D1CC412DD0091E9DF /* PAWForgotPwdViewController.m in Sources */,
+				0058CB8E1CC412DD0091E9DF /* UIImageView+AFNetworking.m in Sources */,
+				0058CB8F1CC412DD0091E9DF /* PAWWelcomeViewController.m in Sources */,
+				0058CB901CC412DD0091E9DF /* AFJSONRequestOperation.m in Sources */,
+				0058CB911CC412DD0091E9DF /* PAWWallPostsTableViewController.m in Sources */,
+				0058CB921CC412DD0091E9DF /* NSString+SBJSON.m in Sources */,
+				0058CB931CC412DD0091E9DF /* UIView+Toast.m in Sources */,
+				0058CB941CC412DD0091E9DF /* PAWWallViewController.m in Sources */,
+				0058CB951CC412DD0091E9DF /* PAWInboxViewController.m in Sources */,
+				0058CB961CC412DD0091E9DF /* PAWLoginViewController.m in Sources */,
+				0058CB971CC412DD0091E9DF /* QBPopupMenuItem.m in Sources */,
+				0058CB981CC412DD0091E9DF /* PAWPhotoViewController.m in Sources */,
+				0058CB991CC412DD0091E9DF /* PlaceView.m in Sources */,
+				0058CB9A1CC412DD0091E9DF /* PAWWallPostCreateViewController.m in Sources */,
+				0058CB9B1CC412DD0091E9DF /* PAWEnterChatViewController.m in Sources */,
+				0058CB9C1CC412DD0091E9DF /* AFXMLRequestOperation.m in Sources */,
+				0058CB9D1CC412DD0091E9DF /* MapPinView.m in Sources */,
+				0058CB9E1CC412DD0091E9DF /* PAWActivityView.m in Sources */,
+				0058CB9F1CC412DD0091E9DF /* PAWSettingViewController.m in Sources */,
+				0058CBA01CC412DD0091E9DF /* PAWSearchRadius.m in Sources */,
+				0058CBA11CC412DD0091E9DF /* AutoSuggestTableView.m in Sources */,
+				0058CBA21CC412DD0091E9DF /* Reachability.m in Sources */,
+				0058CBA31CC412DD0091E9DF /* PAWGetStartVC.m in Sources */,
+				0058CBA41CC412DD0091E9DF /* QBPopupMenuItemView.m in Sources */,
+				0058CBA51CC412DD0091E9DF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				0058CBA61CC412DD0091E9DF /* PAWStartChatViewController.m in Sources */,
+				0058CBA71CC412DD0091E9DF /* EDStarRating.m in Sources */,
+				0058CBA81CC412DD0091E9DF /* PAWNewUserViewController.m in Sources */,
+				0058CBA91CC412DD0091E9DF /* ChatRoomTable.m in Sources */,
+				0058CBAA1CC412DD0091E9DF /* PAWChatRoom.m in Sources */,
+				0058CBAB1CC412DD0091E9DF /* UnderLineLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E56E83EE14D72E1100E856AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1408,6 +1994,7 @@
 				56BC51CC19ADE87A00081378 /* MGMessage.m in Sources */,
 				40BC884B187A5E8800FE35FB /* SBJsonWriter.m in Sources */,
 				AE1E94BC1AF565E3001A6324 /* CustomBadge.m in Sources */,
+				00E2EB621CB5E87500C718F0 /* DropboxBrowserViewController.m in Sources */,
 				AEDB36571AF089FD0061C8B9 /* MBProgressHUD.m in Sources */,
 				40BC8849187A5E8800FE35FB /* SBJsonBase.m in Sources */,
 				AEAB056B1AFA1FD2006D6066 /* PAWInboxTableViewCell.m in Sources */,
@@ -1435,6 +2022,7 @@
 				56BC51C519ADE83C00081378 /* QBPopupMenuPagenatorView.m in Sources */,
 				56BC51C119ADE83C00081378 /* QBPopupMenu.m in Sources */,
 				40853CE9186C105D000A04E3 /* PAWForgotPwdViewController.m in Sources */,
+				00BAA5DF1CD3112400DD9EA3 /* DropBoxFileView.m in Sources */,
 				56BC51E919ADE88900081378 /* UIImageView+AFNetworking.m in Sources */,
 				E56E840A14D72E1100E856AB /* PAWWelcomeViewController.m in Sources */,
 				56BC51E419ADE88900081378 /* AFJSONRequestOperation.m in Sources */,
@@ -1490,6 +2078,162 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0058CC6B1CC412DD0091E9DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyWall/AnyWall-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				INFOPLIST_FILE = "Anywall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK",
+					"$(PROJECT_DIR)/anywall/ZBarSDK/Headers",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.Lokay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0058CC6C1CC412DD0091E9DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyWall/AnyWall-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				INFOPLIST_FILE = "Anywall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK",
+					"$(PROJECT_DIR)/anywall/ZBarSDK/Headers",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.Lokay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0058CC6D1CC412DD0091E9DF /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyWall/AnyWall-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				INFOPLIST_FILE = "Anywall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK",
+					"$(PROJECT_DIR)/anywall/ZBarSDK/Headers",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.Lokay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		0058CC6E1CC412DD0091E9DF /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyWall/AnyWall-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				INFOPLIST_FILE = "Anywall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/AnyWall/ZBarSDK",
+					"$(PROJECT_DIR)/anywall/ZBarSDK/Headers",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.Lokay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad-Hoc";
+		};
 		E56E840E14D72E1100E856AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1788,6 +2532,17 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0058CC6A1CC412DD0091E9DF /* Build configuration list for PBXNativeTarget "Anywall copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0058CC6B1CC412DD0091E9DF /* Debug */,
+				0058CC6C1CC412DD0091E9DF /* Release */,
+				0058CC6D1CC412DD0091E9DF /* Distribution */,
+				0058CC6E1CC412DD0091E9DF /* Ad-Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E56E83EC14D72E1100E856AB /* Build configuration list for PBXProject "lokay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

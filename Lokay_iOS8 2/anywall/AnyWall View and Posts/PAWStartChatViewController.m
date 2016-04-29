@@ -243,7 +243,7 @@
 	UIActionSheet * actionsheet = [[UIActionSheet alloc] initWithTitle:nil
                                                               delegate:self cancelButtonTitle:@"Cancel"
                                                 destructiveButtonTitle:nil
-                                                     otherButtonTitles:@"Take Photo", @"Choose from Library", nil];
+                                                     otherButtonTitles:@"Take Photo", @"Choose from Library",@"Pull From DropBox", nil];
     [actionsheet showInView:self.view];
 }
 
@@ -556,11 +556,75 @@
 		case 1:
 			[self onSelectPhoto];
 			break;
+		case 2:
+			[self fromDropBox];
+			break;
 		default:
 			break;
 	}
 }
 
+- (void)dropboxBrowser:(DropboxBrowserViewController *)browser didDownloadFile:(NSString *)fileName didOverwriteFile:(BOOL)isLocalFileOverwritten {
+	if (isLocalFileOverwritten == YES) {
+		NSLog(@"Downloaded %@ by overwriting local file", fileName);
+	} else {
+		NSLog(@"Downloaded %@ without overwriting", fileName);
+	}
+}
+
+- (void)dropboxBrowser:(DropboxBrowserViewController *)browser didFailToDownloadFile:(NSString *)fileName {
+	NSLog(@"Failed to download %@", fileName);
+}
+
+- (void)dropboxBrowser:(DropboxBrowserViewController *)browser fileConflictWithLocalFile:(NSURL *)localFileURL withDropboxFile:(DBMetadata *)dropboxFile withError:(NSError *)error {
+	NSLog(@"File conflict between %@ and %@\n%@ last modified on %@\nError: %@", localFileURL.lastPathComponent, dropboxFile.filename, dropboxFile.filename, dropboxFile.lastModifiedDate, error);
+}
+- (void)dropboxBrowser:(DropboxBrowserViewController *)browser didSelectFile:(DBMetadata *)file
+{
+	NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+	NSString *localPath = [documentsPath stringByAppendingPathComponent:browser.currentFileName];
+	self.photoImage.image = [UIImage imageWithContentsOfFile:localPath];
+	_isSelectedPhoto = YES;
+	
+	[self.labelChoosePhoto setHidden:YES];
+	btnphoto.hidden = NO;
+	
+	[browser dismissViewControllerAnimated:YES completion:nil];
+
+}
+- (void)dropboxBrowserDismissed:(DropboxBrowserViewController *)browser {
+	// This method is called after Dropbox Browser is dismissed. Do NOT dismiss DropboxBrowser from this method
+	// Perform any UI updates here to display any new data from Dropbox Browser
+	// ex. Update a UITableView that shows downloaded files or get the name of the most recently selected file:
+	//     NSString *fileName = [DropboxBrowserViewController currentFileName];
+}
+
+- (void)dropboxBrowser:(DropboxBrowserViewController *)browser deliveredFileDownloadNotification:(UILocalNotification *)notification {
+	
+}
+
+
+-(void)fromDropBox
+{
+	DropboxBrowserViewController *dropboxBrowser = [[DropboxBrowserViewController alloc]init];
+	
+	dropboxBrowser.allowedFileTypes = @[@"png", @"jpg",@"jpeg"]; // Uncomment to filter file types. Create an array of allowed types. To allow all file types simply don't set the property
+	// dropboxBrowser.tableCellID = @"DropboxBrowserCell"; // Uncomment to use a custom UITableViewCell ID. This property is not required
+	
+	// When a file is downloaded (either successfully or unsuccessfully) you can have DBBrowser notify the user with Notification Center. Default property is NO.
+	 // dropboxBrowser.deliverDownloadNotifications = YES;
+	
+	// Dropbox Browser can display a UISearchBar to allow the user to search their Dropbox for a file or folder. Default property is NO.
+	dropboxBrowser.shouldDisplaySearchBar = YES;
+	
+	// Set the delegate property to recieve delegate method calls
+	dropboxBrowser.rootViewDelegate = self;
+	
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dropboxBrowser];
+
+	//[self.navigationController pushViewController:nav animated:YES];
+	[self presentViewController:nav animated:YES completion:nil];
+}
 - (void)onTakePhoto {
     UIImagePickerController* controller = [[UIImagePickerController alloc] init];
     

@@ -27,10 +27,10 @@
 
 @end
 
-#define kHTHorizontalSelectionListHorizontalMargin 10
-#define kHTHorizontalSelectionListInternalPadding 0
+#define kHTHorizontalSelectionListHorizontalMargin 0
+#define kHTHorizontalSelectionListInternalPadding 1
 
-#define kHTHorizontalSelectionListSelectionIndicatorHeight 2
+#define kHTHorizontalSelectionListSelectionIndicatorHeight 3
 
 #define kHTHorizontalSelectionListTrimHeight 0.5
 
@@ -39,7 +39,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
 
         _scrollView = [[HTHorizontalSelectionListScrollView alloc] init];
         _scrollView.backgroundColor = [UIColor clearColor];
@@ -111,7 +111,7 @@
 
         _selectionIndicatorBar = [[UIView alloc] init];
         _selectionIndicatorBar.translatesAutoresizingMaskIntoConstraints = NO;
-        _selectionIndicatorBar.backgroundColor = [UIColor blackColor];
+        _selectionIndicatorBar.backgroundColor = [UIColor colorWithRed:228.0/256.0 green:96.0/256.0 blue:61.0/256.0 alpha:1.0];
 		_selectionIndicatorBar.clipsToBounds = NO;
 		_selectionIndicatorBarArrow = [[UIImageView alloc]initWithFrame:CGRectMake(0, -14, 18, 16)];
 		_selectionIndicatorBarArrow.image = [UIImage imageNamed:@"triangle"];
@@ -171,8 +171,10 @@
         NSString *buttonTitle = [self.dataSource selectionList:self titleForItemWithIndex:index];
 
         UIButton *button = [self selectionListButtonWithTitle:buttonTitle];
-        [self.contentView addSubview:button];
-		button.backgroundColor = [UIColor redColor];
+		[self.contentView addSubview:button];
+		[button.titleLabel setFont:[UIFont fontWithName:@"GillSans" size:14.5]];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		//button.backgroundColor = [UIColor redColor];
         if (previousButton) {
             [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[previousButton]-padding-[button]"
                                                                                      options:NSLayoutFormatDirectionLeadingToTrailing
@@ -192,10 +194,39 @@
                                                                      attribute:NSLayoutAttributeCenterY
                                                                     multiplier:1.0
                                                                       constant:0.0]];
+		[self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:button
+																	 attribute:NSLayoutAttributeWidth
+																	 relatedBy:NSLayoutRelationEqual
+																		toItem:self.contentView
+																	 attribute:NSLayoutAttributeWidth
+																	multiplier:0.25
+																	  constant:-1.0]];
+
 
         previousButton = button;
 
         [self.buttons addObject:button];
+		switch (index) {
+			case 0:
+				button.backgroundColor = [UIColor colorWithRed:255.0/256.0 green:57.0/256.0 blue:66.0/256.0 alpha:1.0];
+				break;
+			case 3:
+				button.backgroundColor = [UIColor colorWithRed:57.0/256.0 green:164.0/256.0 blue:255.0/256.0 alpha:1.0];
+
+				break;
+			case 2:
+				button.backgroundColor = [UIColor colorWithRed:57.0/256.0 green:84.0/256.0 blue:199.0/256.0 alpha:1.0];
+
+				break;
+			case 1:
+				button.backgroundColor = [UIColor colorWithRed:255.0/256.0 green:202.0/256.0 blue:56.0/256.0 alpha:1.0];
+
+				break;
+    
+				
+			default:
+    break;
+		}
     }
 
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[previousButton]-margin-|"
@@ -342,6 +373,10 @@
             [self.delegate selectionList:self didSelectButtonWithIndex:index];
         }
     }
+}
+-(void)setInitalSelection
+{
+	[self buttonWasTapped:[self.buttons objectAtIndex:0]];
 }
 
 @end

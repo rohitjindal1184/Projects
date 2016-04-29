@@ -17,5 +17,33 @@
     // Drawing code
 }
 */
++(DropBoxFileView *) getView
+{
+	return [[[NSBundle mainBundle] loadNibNamed:@"DropBoxFileView"
+										  owner:nil
+										options:nil] lastObject];
+}
+-(void)setImage:(UIImage *)btnImage
+{
+	[self.btnImage setImage:btnImage forState:UIControlStateNormal];
+}
+
+-(void)setname:(NSString *)str
+{
+	self.lblName.text = str;
+}
+-(void)settag:(int)tag
+{
+	self.btnImage.tag = tag;
+}
+
+- (IBAction)selectphoto:(id)sender {
+	UIButton *btn = (UIButton *)sender;
+	if([btn currentImage])
+	{
+		[_delegate btnClicked:btn.tag];
+	}
+	
+}
 
 @end
