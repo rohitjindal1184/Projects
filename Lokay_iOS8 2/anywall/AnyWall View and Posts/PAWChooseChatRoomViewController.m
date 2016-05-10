@@ -78,7 +78,27 @@
 			 [arrClub addObject:chatRoom];
 		 }
 	 }
-	arrSelectedOption = [[NSArray alloc]initWithArray:arrBar];
+	switch (selectedOption) {
+		case 0:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrBar];
+			break;
+		case 1:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrBrunches];
+			
+			break;
+		case 2:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrClub];
+			
+			break;
+		case 3:
+			arrSelectedOption = [[NSArray alloc]initWithArray:arrDayParties];
+			
+			break;
+			
+			
+		default:
+			break;
+	}
 }
 - (IBAction)notificationSwitchValue:(id)sender {
 	UISwitch *switchNotification = (UISwitch *)sender;
