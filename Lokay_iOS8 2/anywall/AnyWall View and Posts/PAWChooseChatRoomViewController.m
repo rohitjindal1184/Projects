@@ -176,8 +176,17 @@
 
 
 	
-}
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editRoom:) name:@"EDITROOM" object:nil];
 
+	
+}
+-(void)editRoom:(NSNotification *)notification
+{
+	PAWStartChatViewController * viewController = [[PAWStartChatViewController alloc] initWithNibName:@"PAWStartChatViewController" bundle:nil];
+	viewController.chatroom = notification.object;
+	[self.navigationController pushViewController:viewController animated:YES];
+
+}
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
@@ -1483,7 +1492,11 @@
 	else if ([pinColor isEqualToString:@"Purple"]) {
 		cell.imgtype.image = [UIImage imageNamed:@"purplepin"];
 	}
-
+	PFUser *user = [PFUser currentUser];
+	if(!([[chatRoom.creator valueForKey:@"objectId"] isEqualToString:[user valueForKey:@"objectId"]]))
+	{
+		cell.btnEdit.hidden = YES;
+	}
 	
 	cell.btnImage.tag = indexPath.row;
 	cell.btnReport.tag = indexPath.row;

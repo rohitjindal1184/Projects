@@ -36,7 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UIButton *btnCloseTime;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIImageView *photoImage;
+@property (strong, nonatomic) IBOutlet PFImageView *photoImage;
 @property (strong, nonatomic) IBOutlet UIView *pickerView;
 @property (strong, nonatomic) IBOutlet UITextField *txtAddress;
 @property (strong, nonatomic) IBOutlet UITextField *txtLokayCode;
@@ -112,6 +112,8 @@
     [self.txtRadius setText:@"No Limit"];
 	
 	//show loading view
+	if(!_chatroom)
+	{
 	PAWActivityView *activityView = [[PAWActivityView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height)];
 	UILabel *label = activityView.label;
 	label.text = @"Loading...";
@@ -128,6 +130,10 @@
 	}
 	[self.scrollView addSubview:autoSuggestionView];
 	[autoSuggestionView initiate:@""];
+	}
+	else{
+		[self setChatroomValues];
+	}
 	PAWAppDelegate * appDelegate = (PAWAppDelegate *)[[UIApplication sharedApplication] delegate];
 	//[NSThread detachNewThreadSelector:@selector(getAddressFromLocation:) toTarget:self withObject:appDelegate.currentLocation];
 	[self setViewforBussinees];
@@ -137,6 +143,70 @@
 	[formater setDateFormat:@"MM/dd/yyyy"];
 	self.txtdate.text =[NSString stringWithFormat:@"     %@", [formater stringFromDate:date]];
 	type = @"Red";
+
+}
+-(void)setChatroomValues
+{
+	_txtName.text = _chatroom.title;
+	_txtName.userInteractionEnabled = NO;
+	_txtAddress.text = 	[NSString stringWithFormat:@"%@",[_chatroom.object objectForKey:@"address"]];
+	_txtAddress.userInteractionEnabled = NO;
+	PFFile *theImage = [_chatroom.object objectForKey:@"photo"];
+	NSLog(@"%@",theImage.url);
+	
+	if(theImage)
+	{
+		//NSDictionary * arguments = [NSDictionary dictionaryWithObjectsAndKeys:cell.chatRoomImage, @"imageView", theImage, @"photo", nil];
+		//[NSThread detachNewThreadSelector:@selector(loadPhoto:) toTarget:self withObject:arguments];
+		_photoImage.file = theImage;
+		[_photoImage loadInBackground];
+	}
+	int strRadius = [[_chatroom.object objectForKey:@"radius"] intValue];
+	if(strRadius == 0)
+	{
+		_txtRadius.text = @"No Limit";
+	}
+	else
+	{
+		_txtRadius.text = [NSString stringWithFormat:@"%d ft",strRadius];
+	}
+	_txtRadius.userInteractionEnabled = NO;
+	
+	NSString *strType = [_chatroom.object objectForKey:@"type"];
+	
+	if([strType isEqualToString:@"Red"])
+	{
+		self.txtType.text = @"Bar";
+		_imgPin.image = [UIImage imageNamed:@"redpin"];
+	}
+	else if([strType isEqualToString:@"Purple"])
+	{
+		self.txtType.text = @"Club";
+		_imgPin.image = [UIImage imageNamed:@"purplepin"];
+
+	}
+	else if([strType isEqualToString:@"Green"])
+	{
+		self.txtType.text = @"Daytime Parties";
+		_imgPin.image = [UIImage imageNamed:@"greenpin"];
+
+	}
+	else if([strType isEqualToString:@"Blue"])
+	{
+		self.txtType.text = @"Brunch";
+		_imgPin.image = [UIImage imageNamed:@"bluepin"];
+
+	}
+	self.txtType.userInteractionEnabled = NO;
+	self.txtdate.text = [_chatroom.object objectForKey:@"date"];
+	self.txtdate.userInteractionEnabled = NO;
+	
+	[self.btnOpenTime setTitle:[_chatroom.object objectForKey:@"start_time"] forState:UIControlStateNormal];
+	[self.btnCloseTime setTitle:[_chatroom.object objectForKey:@"close_time"] forState:UIControlStateNormal];
+	self.txtDesc.text = [_chatroom.object objectForKey:@"description"];
+	PFGeoPoint *point = [_chatroom.object objectForKey:@"location"];
+	_coordinate.latitude = point.latitude;
+	_coordinate.longitude = point.longitude;
 
 }
 -(void)setViewforBussinees
@@ -742,7 +812,11 @@
 	
 	//create chat room object to post
 //cSpBf5dCR0
-	PFObject * chatroom = [PFObject objectWithClassName:@"ChatRoom"];
+	PFObject * chatroom;
+	if(!_chatroom)
+		chatroom = [PFObject objectWithClassName:@"ChatRoom"];
+	else
+		chatroom = _chatroom.object;
 	[chatroom setObject:user forKey:@"creator"];
 	[chatroom setObject:point forKey:@"location"];
 	[chatroom setObject:address forKey:@"address"];
@@ -789,6 +863,7 @@
 	//HUD.mode = MBProgressHUDModeAnnularDeterminate;
 	[self.view addSubview:HUD];
 	[HUD show:YES];
+	
 	[chatroom saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 		//[activityView.activityIndicator stopAnimating];
 		//[activityView removeFromSuperview];

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/Views/ChatRoomTableViewCell.m"
-            timestampString = "475561492.025396"
+            timestampString = "486873941.602267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-openAppleMaps"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/Views/ChatRoomTableViewCell.m"
-            timestampString = "475561492.025396"
+            timestampString = "486873941.602267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-openGoogleMaps"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/Views/ChatRoomTableViewCell.m"
-            timestampString = "475561492.025396"
+            timestampString = "486873941.602267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-addressBtnClicked"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/Views/ChatRoomTableViewCell.m"
-            timestampString = "475561492.025396"
+            timestampString = "486873941.602267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-openAppleMaps"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "484549370.429242"
+            timestampString = "486877270.923598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "639"
-            endingLineNumber = "639"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
             landmarkName = "-checkStartTime:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "484549370.429242"
+            timestampString = "486877270.923598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1138"
-            endingLineNumber = "1138"
+            startingLineNumber = "1147"
+            endingLineNumber = "1147"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "483600338.555669"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "933"
-            endingLineNumber = "933"
+            startingLineNumber = "1008"
+            endingLineNumber = "1008"
             landmarkName = "-getAddressFromAddress:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "474181801.415357"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "-textFieldDidEndEditing:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "474267853.763785"
+            timestampString = "486877270.923598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "483600338.555669"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1072"
-            endingLineNumber = "1072"
+            startingLineNumber = "1147"
+            endingLineNumber = "1147"
             landmarkName = "-actionEnlargePhoto:"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "482216945.478895"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "580"
-            endingLineNumber = "580"
+            startingLineNumber = "650"
+            endingLineNumber = "650"
             landmarkName = "-dropboxBrowser:fileConflictWithLocalFile:withDropboxFile:withError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWStartChatViewController.m"
-            timestampString = "483600146.164681"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "603"
-            endingLineNumber = "603"
+            startingLineNumber = "673"
+            endingLineNumber = "673"
             landmarkName = "-dropboxBrowser:deliveredFileDownloadNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,7 +410,7 @@
                   moduleName = "Anywall"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mobileprogramming/Projects/Lokay_iOS8%202/AnyWall/DropboxBrowserViewController.m"
-                  timestampString = "484549570.53648"
+                  timestampString = "486881937.254902"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "496"
@@ -425,7 +425,7 @@
                   moduleName = "Anywall"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mobileprogramming/Projects/Lokay_iOS8%202/AnyWall/DropboxBrowserViewController.m"
-                  timestampString = "484549570.536622"
+                  timestampString = "486881937.255041"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "496"
@@ -505,13 +505,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "484549370.429242"
+            filePath = "AnyWall/AnyWall View and Posts/PAWEnterChatViewController.m"
+            timestampString = "485840509.133622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -521,13 +521,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "484549370.429242"
+            filePath = "AnyWall/AnyWall View and Posts/PAWStartChatViewController.m"
+            timestampString = "486881663.096577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1431"
-            endingLineNumber = "1431"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "-onCreate:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnyWall/AnyWall View and Posts/PAWStartChatViewController.m"
+            timestampString = "486881804.464686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "802"
+            endingLineNumber = "802"
+            landmarkName = "-uploadChatRoomData:address:lokay_code:radius:pinColor:name:description:photo:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

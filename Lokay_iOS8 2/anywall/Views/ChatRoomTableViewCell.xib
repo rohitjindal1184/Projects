@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -82,11 +82,19 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36t-tM-Ffu">
+                        <rect key="frame" x="14" y="3" width="16" height="16"/>
+                        <state key="normal" title="Button" image="edit.png"/>
+                        <connections>
+                            <action selector="actionEdit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PQw-CP-Ubf"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="btnEdit" destination="36t-tM-Ffu" id="DoC-os-LON"/>
                 <outlet property="btnImage" destination="toD-03-BYB" id="9Fs-2y-Brh"/>
                 <outlet property="btnReport" destination="ist-6I-0KJ" id="KQN-Ya-7ec"/>
                 <outlet property="chatRoomImage" destination="jVY-Oz-m9i" id="lF3-kN-LMP"/>
@@ -102,6 +110,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="edit.png" width="24" height="24"/>
         <image name="icon-120.png" width="120" height="120"/>
         <image name="location.png" width="17" height="23"/>
         <image name="orangecircle.png" width="21" height="5"/>

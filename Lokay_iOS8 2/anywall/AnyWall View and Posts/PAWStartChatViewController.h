@@ -11,6 +11,7 @@
 #import "MBProgressHUD.h"
 #import "Mailgun.h"
 #import "DropboxBrowserViewController.h"
+#import "PAWChatRoom.h"
 @interface PAWStartChatViewController : UIViewController<PlaceSelected,DropboxBrowserDelegate>
 {
 	AutoSuggestTableView *autoSuggestionView;
@@ -26,5 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIView *viewTime;
 @property (weak, nonatomic) IBOutlet UIToolbar *dateToolbar;
 - (IBAction)actionDatedone:(id)sender;
+@property (strong, nonatomic) PAWChatRoom *chatroom;
 
 @end

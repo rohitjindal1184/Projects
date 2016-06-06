@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnImage;
 @property (strong, nonatomic)   PAWChatRoom *chatroom;
 @property (weak, nonatomic) IBOutlet UIImageView *imgtype;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *btnEdit;
+- (IBAction)actionEdit:(id)sender;
 
 - (IBAction)showImage:(id)sender;
 - (IBAction)reportUser:(id)sender;

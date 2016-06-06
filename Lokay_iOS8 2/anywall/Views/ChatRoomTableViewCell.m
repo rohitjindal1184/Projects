@@ -45,6 +45,11 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)actionEdit:(id)sender {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"EDITROOM" object:self.chatroom];
+	
+}
+
 - (IBAction)showImage:(id)sender {
 	UIButton *btn = (UIButton *)sender;
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"SHOWPHOTO" object:self.chatroom];
