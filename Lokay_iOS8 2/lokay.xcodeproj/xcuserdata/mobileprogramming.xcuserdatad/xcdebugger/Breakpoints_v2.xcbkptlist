@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "486877270.923598"
+            timestampString = "488068878.737645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "648"
-            endingLineNumber = "648"
+            startingLineNumber = "819"
+            endingLineNumber = "819"
             landmarkName = "-checkStartTime:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
-            timestampString = "486877270.923598"
+            timestampString = "488068878.737645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1147"
-            endingLineNumber = "1147"
+            startingLineNumber = "1318"
+            endingLineNumber = "1318"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,7 +410,7 @@
                   moduleName = "Anywall"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mobileprogramming/Projects/Lokay_iOS8%202/AnyWall/DropboxBrowserViewController.m"
-                  timestampString = "486881937.254902"
+                  timestampString = "488068639.276485"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "496"
@@ -425,7 +425,7 @@
                   moduleName = "Anywall"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mobileprogramming/Projects/Lokay_iOS8%202/AnyWall/DropboxBrowserViewController.m"
-                  timestampString = "486881937.255041"
+                  timestampString = "488068639.276614"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "496"
@@ -544,6 +544,22 @@
             startingLineNumber = "802"
             endingLineNumber = "802"
             landmarkName = "-uploadChatRoomData:address:lokay_code:radius:pinColor:name:description:photo:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
+            timestampString = "488068562.824369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
+            landmarkName = "-onShare:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

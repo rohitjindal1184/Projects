@@ -197,7 +197,7 @@
 		_imgPin.image = [UIImage imageNamed:@"bluepin"];
 
 	}
-	self.txtType.userInteractionEnabled = NO;
+	//self.txtType.userInteractionEnabled = NO;
 	self.txtdate.text = [_chatroom.object objectForKey:@"date"];
 	self.txtdate.userInteractionEnabled = NO;
 	

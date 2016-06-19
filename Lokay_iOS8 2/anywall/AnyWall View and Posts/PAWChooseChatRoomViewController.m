@@ -182,10 +182,18 @@
 }
 -(void)editRoom:(NSNotification *)notification
 {
+	chatroomEdit = notification.object;
+	    UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+	                                                              delegate:self
+														 cancelButtonTitle:@"Cancel"
+													destructiveButtonTitle:nil
+														 otherButtonTitles:@"Delete", @"Edit", @"Share", nil];
+		[actionSheet showInView:self.view];
+	/*
 	PAWStartChatViewController * viewController = [[PAWStartChatViewController alloc] initWithNibName:@"PAWStartChatViewController" bundle:nil];
 	viewController.chatroom = notification.object;
 	[self.navigationController pushViewController:viewController animated:YES];
-
+	 */
 }
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
@@ -342,12 +350,13 @@
 }
 
 - (IBAction)onShare:(id)sender {
-	//    UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-	//                                                              delegate:self
-	//													 cancelButtonTitle:@"Cancel"
-	//												destructiveButtonTitle:nil
-	//													 otherButtonTitles:@"Twitter", @"Facebook", @"Email", @"SMS", nil];
-	//	[actionSheet showInView:self.view];
+	    UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+	                                                              delegate:self
+														 cancelButtonTitle:@"Cancel"
+													destructiveButtonTitle:nil
+														 otherButtonTitles:@"Twitter", @"Facebook", @"Email", @"SMS", nil];
+	actionSheet.tag = 1;
+		[actionSheet showInView:self.view];
 }
 
 - (IBAction)refreshChat:(id)sender {
@@ -356,42 +365,204 @@
 	[self getAllChatRoom];
 	
 }
-
+-(void)delete
+{
+	[chatroomEdit.object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+		
+	} ];
+	[self getAllChatRoom];
+}
 
 #pragma mark - action sheet delegate
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if(actionSheet.tag == 1)
+	{
+		switch (buttonIndex) {
+			case 0:
+				[self onTwitter];
+				break;
+			case 1:
+				[self onFacebook];
+				break;
+			case 2:
+				[self onEmail];
+				break;
+			case 3:
+				[self onSMS];
+				break;
+				default:
+				break;
+		}
+		return;
+	}
 	switch (buttonIndex) {
 		case 0:
-			
+			[self delete];
 			break;
 		case 1:
-			
+			[self editRoomMethod];
 			break;
 		case 2:
-			
-			break;
-		case 3:
-			
-			break;
+			[self onShare:nil];
 		default:
 			break;
 	}
 }
+-(void)editRoomMethod
+{
+	PAWStartChatViewController *viewController = [[PAWStartChatViewController alloc] initWithNibName:@"PAWStartChatViewController" bundle:nil];
+	viewController.chatroom = chatroomEdit;
+	[self.navigationController pushViewController:viewController animated:YES];
 
+}
 - (void) onTwitter {
+	if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Can not post card to facebook at the moment. Please confirm facebook login in setting." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+		[alert show];
+		return;
+	}
 	
+	SLComposeViewController * twitterComposeSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+	
+	NSString * strMsg = @"http://www.lokayme.com/";
+	
+	[twitterComposeSheet setInitialText:strMsg];
+	
+	[twitterComposeSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+		NSString * title = @"Tweet";
+		NSString * msg;
+		if (result == SLComposeViewControllerResultCancelled) {
+		}
+		else if (result == SLComposeViewControllerResultDone) {
+			msg = @"Posted successfully!";
+		}
+		else {
+			msg = @"";
+		}
+		
+		if ([msg length]) {
+			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+			[alert show];
+		}
+		
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}];
+	
+	[self presentViewController:twitterComposeSheet animated:YES completion:nil];
 }
 
 - (void) onFacebook {
+	if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Can not post card to facebook at the moment. Please confirm facebook login in setting." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+		[alert show];
+		return;
+	}
 	
+	SLComposeViewController * facebookComposeSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+	
+	NSString * strMsg = @"http://www.lokayme.com/";
+	
+	[facebookComposeSheet setInitialText:strMsg];
+	
+	[facebookComposeSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+		NSString * title = @"Facebook";
+		NSString * msg;
+		if (result == SLComposeViewControllerResultCancelled) {
+		}
+		else if (result == SLComposeViewControllerResultDone) {
+			msg = @"Posted successfully!";
+		}
+		else {
+			msg = @"";
+		}
+		
+		if ([msg length]) {
+			UIAlertView * alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+			[alert show];
+		}
+		
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}];
+	
+	[self presentViewController:facebookComposeSheet animated:YES completion:nil];
 }
 
 - (void) onEmail {
+	if (![MFMailComposeViewController canSendMail]) {
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Email" message:@"You can not send mail because you did not set mail address on your phone." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+		[alert show];
+		return;
+	}
 	
+	// Email Subject
+	NSString *emailTitle = @"LokayMe";
+	NSString *emailBody = @"http://www.lokayme.com";
+	
+	MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+	
+	mc.mailComposeDelegate = self;
+	[mc setSubject:emailTitle];
+	[mc setMessageBody:emailBody isHTML:NO];
+	
+	[self presentViewController:mc animated:YES completion:NULL];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+	switch (result)
+	{
+		case MFMailComposeResultCancelled:
+			NSLog(@"Mail cancelled");
+			break;
+		case MFMailComposeResultSaved:
+			NSLog(@"Mail saved");
+			break;
+		case MFMailComposeResultSent:
+			NSLog(@"Mail sent");
+			break;
+		case MFMailComposeResultFailed:
+			NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+			break;
+		default:
+			break;
+	}
+	
+	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void) onSMS {
+	if (![MFMessageComposeViewController canSendText]) {
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"SMS" message:@"You can not send text message on your phone." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+		[alert show];
+		return;
+	}
 	
+	NSString *emailBody = @"http://www.lokayme.com";
+	
+	MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	
+	controller.body = emailBody;
+	controller.messageComposeDelegate = self;
+	[self presentViewController:controller animated:YES completion:NULL];
+}
+
+- (void) messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+	switch (result)
+	{
+		case MessageComposeResultCancelled:
+			NSLog(@"Mail cancelled");
+			break;
+		case MessageComposeResultSent:
+			NSLog(@"Mail sent");
+			break;
+		case MessageComposeResultFailed:
+			NSLog(@"Mail sent failure");
+			break;
+		default:
+			break;
+	}
+	
+	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - text field delegate

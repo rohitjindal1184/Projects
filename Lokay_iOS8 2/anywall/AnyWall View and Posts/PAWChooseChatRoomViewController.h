@@ -19,7 +19,8 @@
 #import "TabView.h"
 #import "ChatRoomTableViewCell.h"
 #import "HTHorizontalSelectionList.h"
-
+#import <Parse/Parse.h>
+#import <Social/Social.h>
 @interface PAWChooseChatRoomViewController : UIViewController<PlaceSelected,TabViewDelegate,HTHorizontalSelectionListDelegate,HTHorizontalSelectionListDataSource>
 {
 	PAWAppDelegate *appDelegate;
@@ -41,6 +42,7 @@
 	NSMutableArray *arrBrunches;
 	int selectedOption;
 	NSArray *arrSelectedOption;
+	PAWChatRoom *chatroomEdit;
 
 //	ChatRoomTable *chatroomTb;
 }
