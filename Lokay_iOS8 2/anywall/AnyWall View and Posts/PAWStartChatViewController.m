@@ -148,9 +148,9 @@
 -(void)setChatroomValues
 {
 	_txtName.text = _chatroom.title;
-	_txtName.userInteractionEnabled = NO;
+	//_txtName.userInteractionEnabled = NO;
 	_txtAddress.text = 	[NSString stringWithFormat:@"%@",[_chatroom.object objectForKey:@"address"]];
-	_txtAddress.userInteractionEnabled = NO;
+//	_txtAddress.userInteractionEnabled = NO;
 	PFFile *theImage = [_chatroom.object objectForKey:@"photo"];
 	NSLog(@"%@",theImage.url);
 	
@@ -170,7 +170,7 @@
 	{
 		_txtRadius.text = [NSString stringWithFormat:@"%d ft",strRadius];
 	}
-	_txtRadius.userInteractionEnabled = NO;
+	//_txtRadius.userInteractionEnabled = NO;
 	
 	NSString *strType = [_chatroom.object objectForKey:@"type"];
 	
@@ -199,7 +199,7 @@
 	}
 	//self.txtType.userInteractionEnabled = NO;
 	self.txtdate.text = [_chatroom.object objectForKey:@"date"];
-	self.txtdate.userInteractionEnabled = NO;
+	//self.txtdate.userInteractionEnabled = NO;
 	
 	[self.btnOpenTime setTitle:[_chatroom.object objectForKey:@"start_time"] forState:UIControlStateNormal];
 	[self.btnCloseTime setTitle:[_chatroom.object objectForKey:@"close_time"] forState:UIControlStateNormal];
