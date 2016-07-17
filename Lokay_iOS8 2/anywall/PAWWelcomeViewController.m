@@ -73,6 +73,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)skipButtonSelected:(id)sender {
+	PAWEnterChatViewController *wallViewController = [[PAWEnterChatViewController alloc] initWithNibName:@"PAWEnterChatViewController" bundle:nil];
+	[(UINavigationController *)self.presentingViewController pushViewController:wallViewController animated:NO];
+	[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+	
+}
+
 - (IBAction)loginButtonSelected:(id)sender
 {
 	PAWLoginViewController *loginViewController = [[PAWLoginViewController alloc] initWithNibName:nil bundle:nil];

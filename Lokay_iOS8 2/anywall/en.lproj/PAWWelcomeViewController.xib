@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PAWWelcomeViewController">
@@ -22,11 +22,11 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="n5d-qK-Rad">
-                    <rect key="frame" x="0.0" y="319" width="320" height="249"/>
+                    <rect key="frame" x="0.0" y="256" width="320" height="312"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Mf-y6-EUe">
-                            <rect key="frame" x="37" y="26" width="247" height="34"/>
+                            <rect key="frame" x="37" y="89" width="247" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="login.png">
@@ -37,7 +37,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3iZ-qZ-VFw">
-                            <rect key="frame" x="37" y="82" width="247" height="34"/>
+                            <rect key="frame" x="37" y="145" width="247" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <inset key="insetFor6xAndEarlier" minX="-2" minY="0.0" maxX="2" maxY="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -49,7 +49,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VLU-1m-Yxm">
-                            <rect key="frame" x="37" y="138" width="247" height="34"/>
+                            <rect key="frame" x="37" y="201" width="247" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <inset key="insetFor6xAndEarlier" minX="-2" minY="0.0" maxX="2" maxY="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -61,7 +61,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RIo-ox-YEX">
-                            <rect key="frame" x="62" y="179" width="196" height="41"/>
+                            <rect key="frame" x="62" y="242" width="196" height="41"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" image="screen1_4.png">
@@ -73,6 +73,18 @@
                             </state>
                             <connections>
                                 <action selector="forgotButtonSelected:" destination="-1" eventType="touchUpInside" id="Wzp-T5-Dtq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WgJ-yP-IUS">
+                            <rect key="frame" x="37" y="39" width="247" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.24398970019999999" green="0.2778077263" blue="0.44378111850000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                            <state key="normal" title="SKIP">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="skipButtonSelected:" destination="-1" eventType="touchUpInside" id="qEr-JS-nfb"/>
                             </connections>
                         </button>
                     </subviews>
@@ -94,9 +106,4 @@
         <image name="screen1_4.png" width="110" height="11"/>
         <image name="signup.png" width="247" height="34"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
