@@ -17,6 +17,7 @@
 #import "PAWInboxViewController.h"
 #import "PAWStartChatViewController.h"
 #import "PAWSettingViewController.h"
+#import "PAWWelcomeViewController.h"
 #define ACTIVITY_VIEW_TAG		100
 #define DETAIL_CHATROOM_TAG		10000
 
@@ -224,6 +225,11 @@
 
 -(void)showPhotonew:(NSNotification *)notification
 {
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
 	PAWChatRoom *chatroom =  (PAWChatRoom *)notification.object;
 	NSLog(@"Char room %@", chatroom.object);
 	appDelegate.ChatOwner=[chatroom.object objectForKey:@"creator"];
@@ -244,6 +250,11 @@
 
 -(void)showPhoto:(NSNotification *)notification
 {
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
 	NSInteger tag =  [(NSNumber *)notification.object integerValue];
 	PAWChatRoom * chatroom = [self.allChatRoomMain objectAtIndex:tag];
 	NSLog(@"Char room %@", chatroom.object);
@@ -341,6 +352,15 @@
 			[self.navigationController popToViewController:pVC animated:YES];
 			return;
 		}
+		
+	}
+	
+	for (UIViewController * pVC in pVCs) {
+		 if ([pVC isKindOfClass:[PAWWelcomeViewController class]])
+		{
+			[self.navigationController popToViewController:pVC animated:NO];
+			return;
+		}
 	}
 }
 
@@ -350,6 +370,12 @@
 }
 
 - (IBAction)onShare:(id)sender {
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
+	
 	    UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:nil
 	                                                              delegate:self
 														 cancelButtonTitle:@"Cancel"
@@ -1117,8 +1143,12 @@
 	
 	NSInteger tag =  [(NSNumber *)notification.object integerValue];
 	if(tag < 2000){
+		
+		
+		
 		PAWChatRoom * chatroom = [self.allChatRoomMain objectAtIndex:tag];
 		[self gotoChat:chatroom];
+			
 		
 	}
 	else
@@ -1156,6 +1186,12 @@
 }
 -(void)gotoChat:(PAWChatRoom *)chatroom
 {
+	
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
 	NSLog(@"Char room %@", chatroom.object);
 	appDelegate.ChatOwner=[chatroom.object objectForKey:@"creator"];
 	
@@ -1521,6 +1557,11 @@
  
  */
 - (void)gotoNotifications{
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
 	PAWInboxViewController *inboxVC = [[PAWInboxViewController alloc]init];
 	inboxVC.arrChatRoom = _allChatRoomMain;
 	[self.navigationController pushViewController:inboxVC animated:YES];
@@ -1741,6 +1782,7 @@
 
 	
 }
+
 
 
 @end

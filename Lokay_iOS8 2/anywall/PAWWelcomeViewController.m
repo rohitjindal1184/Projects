@@ -10,6 +10,7 @@
 #import "PAWForgotPwdViewController.h"
 #import "PAWAppDelegate.h"
 #import "PAWEnterChatViewController.h"
+#import "PAWChooseChatRoomViewController.h"
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 
@@ -82,8 +83,15 @@
 
 - (IBAction)loginButtonSelected:(id)sender
 {
+	UIButton *btn = (UIButton *)sender;
+	if(btn.tag == 1)
+	{
+		PAWChooseChatRoomViewController * viewController = [[PAWChooseChatRoomViewController alloc] initWithNibName:@"PAWChooseChatRoomViewController" bundle:nil];
+		[self.navigationController pushViewController:viewController animated:YES];
+		return;
+	}
 	PAWLoginViewController *loginViewController = [[PAWLoginViewController alloc] initWithNibName:nil bundle:nil];
-[self.navigationController presentViewController:loginViewController animated:YES completion:^{}];
+	[self.navigationController presentViewController:loginViewController animated:YES completion:^{}];
 }
 
 - (IBAction)signupButtonSelected:(id)sender
