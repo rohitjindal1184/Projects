@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "anywall/PAWWelcomeViewController.m"
-            timestampString = "491591336.53822"
+            timestampString = "492235074.925336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-skipButtonSelected:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnyWall/PAWWelcomeViewController.m"
-            timestampString = "491591336.53822"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-loginButtonSelected:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "671"
             endingLineNumber = "671"
-            landmarkName = "-getAllChatRoom"
+            landmarkName = "-textFieldDidEndEditing:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1139"
             endingLineNumber = "1139"
-            landmarkName = "-onEnterChatRoom:"
+            landmarkName = "-addDetailChatRoom:basePoint:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -81,38 +65,6 @@
             endingLineNumber = "1151"
             landmarkName = "-onEnterChatRoom:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PAWChooseChatRoomViewController onEnterChatRoom:]"
-                  moduleName = "Anywall"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MP/Projectgit/Lokay_iOS8%202/AnyWall/AnyWall%20View%20and%20Posts/PAWChooseChatRoomViewController.m"
-                  timestampString = "491623825.172696"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1137"
-                  endingLineNumber = "1137"
-                  offsetFromSymbolStart = "346">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[PAWChooseChatRoomViewController onEnterChatRoom:]"
-                  moduleName = "Anywall"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MP/Projectgit/Lokay_iOS8%202/AnyWall/AnyWall%20View%20and%20Posts/PAWChooseChatRoomViewController.m"
-                  timestampString = "491623825.18195"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1137"
-                  endingLineNumber = "1137"
-                  offsetFromSymbolStart = "354">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -127,7 +79,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1188"
             endingLineNumber = "1188"
-            landmarkName = "-gotoChat:"
+            landmarkName = "-onEnterChatRoom:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnyWall/AnyWall View and Posts/PAWChooseChatRoomViewController.m"
+            timestampString = "492235201.244386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1345"
+            endingLineNumber = "1345"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

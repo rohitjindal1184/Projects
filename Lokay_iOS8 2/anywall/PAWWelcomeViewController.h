@@ -11,6 +11,8 @@
 
 }
 @property (weak, nonatomic) IBOutlet UIView *cameraView;
+@property (assign) BOOL isBack;
+
 // - (IBAction)loginButtonSelected:(id)sender;
 // - (IBAction)createButtonSelected:(id)sender;
 - (IBAction)skipButtonSelected:(id)sender;

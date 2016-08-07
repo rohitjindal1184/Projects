@@ -35,6 +35,12 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+	if(self.isBack)
+	{
+		[self signupButtonSelected:nil];
+		self.isBack = NO;
+		return;
+	}
 	reader = [ZBarReaderViewController new];
 	reader.supportedOrientationsMask = ZBarOrientationMaskAll;
 	

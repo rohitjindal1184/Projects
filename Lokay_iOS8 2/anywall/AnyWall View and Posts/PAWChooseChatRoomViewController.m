@@ -152,7 +152,7 @@
 		tabview = [TabView getView];
 	tabview.delegate = self;
 
-	tabview.frame = CGRectMake(0,appDelegate.window.frame.size.height - 50, 320, 50);
+	tabview.frame = CGRectMake(0,self.view.frame.size.height - 50, 320, 50);
 	[self.view addSubview:tabview];
 	
 	[self.view bringSubviewToFront:tabview];
@@ -346,6 +346,15 @@
 }
 
 - (IBAction)onBack:(id)sender {
+	
+	if(sender == nil)
+	{
+		UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Login" message:@"Please signup to access." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Signup", nil];
+		alert.tag = 2;
+		[alert show];
+		return;
+	}
+	
 	NSArray * pVCs = [self.navigationController viewControllers];
 	for (UIViewController * pVC in pVCs) {
 		if ([pVC isKindOfClass:[PAWEnterChatViewController class]]) {
@@ -358,6 +367,9 @@
 	for (UIViewController * pVC in pVCs) {
 		 if ([pVC isKindOfClass:[PAWWelcomeViewController class]])
 		{
+			PAWWelcomeViewController *wVC = (PAWWelcomeViewController *)pVC;
+			
+			wVC.isBack = YES;
 			[self.navigationController popToViewController:pVC animated:NO];
 			return;
 		}
@@ -1329,6 +1341,17 @@
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 {
+	if (alertView.tag == 2)
+	{
+		if(buttonIndex == 1)
+		{
+		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+		[self onBack:btn];
+		}
+		return;
+	}
+
+	
 	if(buttonIndex == 0)
 	{
 		CLLocationCoordinate2D location;
@@ -1361,7 +1384,7 @@
 		 */
 		
 	}
-	objectSelected = nil;
+    	objectSelected = nil;
 }
 
 - (void) getAddressFromLocation:(CLLocation *)location {
@@ -1590,6 +1613,12 @@
 }
 -(void)settingAction
 {
+	if(![PFUser currentUser])
+	{
+		[self onBack:nil];
+		return;
+	}
+	
 	PAWSettingViewController *objSetting = [[PAWSettingViewController alloc]initWithNibName:@"PAWSettingViewController" bundle:nil];
 	[self.navigationController pushViewController:objSetting animated:YES];
 
